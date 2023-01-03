@@ -6,14 +6,16 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- ========== botom arriba links ========== -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'></link>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+
+    <!-- ========== descarga ek css de una pagina web de los card que desplazan y el blog ========== -->
     <link
       href="https://assets.website-files.com/5fef5619b640934b33c2385e/css/portfolio-webflow-html-website-template.webflow.fb0c99d79.css"
       rel="stylesheet"
       type="text/css"
-    />
-    <link
-      href="https://assets.website-files.com/5fef5619b640934b33c2385e/6078acfd46b89d8f2ccece66_Group%2073.png"
-      rel="apple-touch-icon"
     />
   </head>
   <body>
@@ -30,5 +32,37 @@
       src="https://assets.website-files.com/5fef5619b640934b33c2385e/js/webflow.c636f99f2.js"
       type="text/javascript"
     ></script>
+
+
+    <!-- ========== java botom arriba========== -->
+    <script>
+      $(document).ready(function () {
+        /*aqui planteamos que el boton tenga una animación al momento de desaparecer*/
+        $(".arriba").click(function () {
+          $("body,html").animate(
+            {
+              scrollTop: "0px",
+            },
+            300
+          );
+        });
+        $(window).scroll(function () {
+          /*aqui le indicamos que al momento  que se esta deslizando
+           * hacia arriba gracias a la función "function" esta llamando a la animación*/
+          if ($(this).scrollTop() > 0) {
+            $(".arriba").slideDown(300);
+          } else {
+            /*En este caso el boton esta a la vista del usuario*/
+            $(".arriba").slideUp(300);
+          }
+        });
+      });
+    </script>
+
+
+     <!-- ========== Accessibilidad========== -->
+    
+    <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "OGRNOa8KSi");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
   </body>
 </html>
