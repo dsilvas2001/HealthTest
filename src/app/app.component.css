@@ -370,3 +370,11 @@
 }
 
 /*Fin boton que desplaza hacia arriba*/
+/*punto del blog*/
+.blog-item-dot {
+  background: #000;
+}
+/* Fin punto del blog*/
+.arrowrigtht {
+  color: #000;
+}
