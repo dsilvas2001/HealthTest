@@ -378,14 +378,6 @@ section:nth-child(even) {
   z-index: 0;
 }
 
-.review .box-container .box img {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 0.5rem solid #fff;
-}
-
 .review .box-container .box h3 {
   color: #fff;
   font-size: 2.2rem;
@@ -406,13 +398,8 @@ section:nth-child(even) {
 
 .review .box-container .box::before {
   content: "";
-  position: absolute;
   top: -4rem;
-  left: 50%;
   transform: translateX(-50%);
-  background: var(--green);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
   height: 25rem;
   width: 120%;
   z-index: -1;
@@ -663,4 +650,113 @@ button:active .shadow {
 
 button:focus:not(:focus-visible) {
   outline: none;
+}
+
+/*card de la seccion curiosidades*/
+.card {
+  width: 190px;
+  height: 254px;
+  padding: 0.8em;
+  background: #f5f5f5;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card-info {
+  padding-top: 10%;
+}
+
+svg {
+  width: 20px;
+  height: 20px;
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+/*Text*/
+.text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: 0.9em;
+  padding-bottom: 10px;
+}
+
+/*Button*/
+.card-button {
+  border: 1px solid #252525;
+  display: flex;
+  padding: 0.3em;
+  cursor: pointer;
+  border-radius: 50px;
+  transition: 0.3s ease-in-out;
+}
+
+/*Hover*/
+.card-img:hover {
+  transform: translateY(-25%);
+  box-shadow: rgba(226, 196, 63, 0.25) 0px 13px 47px -5px,
+    rgba(180, 71, 71, 0.3) 0px 8px 16px -8px;
+}
+
+.card-button:hover {
+  border: 1px solid #ffcaa6;
+  background-color: #ffcaa6;
+}
+
+/*botom para reproducir video*/
+.btn2 {
+  width: 140px;
+  height: 50px;
+  background: linear-gradient(to top, #00154c, #12376e, #23487f);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.btn span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.btn2:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn2:hover .btn-text-two {
+  top: 50%;
 }
