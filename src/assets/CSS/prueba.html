@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="stylepagprincipal.css" />
+  </head>
+
+  <body>
+    <section class="review" id="review">
+      <h1 class="heading">Datos <span>Curiosos</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <div class="card-img"></div>
+          <div class="card-info">
+            <h3 style="color: black">Dormir</h3>
+
+            <p class="text" style="position: relative; top: -2em">
+              Cuando duermes tu cuerpo se repara y elimina la tensión muscular
+              causada por el estrés del día. Por eso, una de las consecuencias
+              de dormir poco es que el estrés se acumula y duplica. Esto
+              ocasiona que sea más difícil enfrentar los retos del día
+              siguiente.
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="video-container">
+              <a class="btn2">
+                <span class="btn-text-one">Aprende</span>
+                <span class="btn-text-two">Great!</span>
+              </a>
+            </div>
+
+            <div class="popup-video">
+              <span class="close">&times;</span>
+              <video src="../img/Pine.mp4" muted autoplay controls></video>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="card-img">
+            <img
+              style="height: 12.5em"
+              src="https://i1.wp.com/lopezdoriga.com/wp-content/uploads/2019/02/video-games.jpg?fit=1200%2C645&ssl=1"
+              alt=""
+            />
+          </div>
+          <div class="card-info">
+            <h3 style="color: black">Videojuegos</h3>
+
+            <p class="text" style="position: relative; top: -2em">
+              La naturaleza competitiva de los videojuegos puede hacernos sentir
+              estresados, enojados o frustrados. El uso indiscriminado de los
+              videojuegos no solo afectan nuestras habilidades sociales, sino
+              que también aumentan los niveles de cortisol, una hormona
+              esteroide que es un indicador de estrés.
+            </p>
+          </div>
+          <div class="card-footer">
+            <div class="video-container">
+                <a class="btn2">
+                  <span class="btn-text-one">Aprende</span>
+                  <span class="btn-text-two">Great!</span>
+                </a>
+              </div>
+  
+              <div class="popup-video">
+                <span class="close">&times;</span>
+                <video src="../img/Pine.mp4" muted autoplay controls></video>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="card-img">
+            <img
+              style="height: 12.5em"
+              src="https://media.lmneuquen.com/p/eac8bbf4c6d6f3cce9fc6b4c27991295/adjuntos/195/imagenes/004/148/0004148682/el-exceso-del-celular-puede-acercar-a-los-jovenes-a-la-depresionjpg.jpg"
+              alt=""
+            />
+          </div>
+          <div class="card-info">
+            <h3 style="color: black">Celular</h3>
+
+            <p class="text" style="position: relative; top: -2em">
+              La adicción a los teléfonos inteligentes predice el desarrollo de
+              síntomas depresivos.Por lo cual ha empeorado las relaciones con
+              los demás y ha disminuido las habilidades sociales.
+            </p>
+          </div>
+          <div class="card-footer">
+            <a class="btn2">
+              <span class="btn-text-one">Hover me</span>
+              <span class="btn-text-two">Great!</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.querySelectorAll(".btn2").forEach((vid) => {
+        vid.onclick = () => {
+
+           
+
+          document.querySelector(".popup-video").style.display = "block";
+       
+        };
+      });
+      document.querySelector(".popup-video span").onclick = () => {
+        document.querySelector(".popup-video").style.display = "none";
+      };
+    </script>
+  </body>
+</html>

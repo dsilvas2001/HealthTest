@@ -28,78 +28,132 @@
 
 <body>
   <app-root></app-root>
-
   <!-- booking section starts   -->
+  
+  <section class="book" id="book">
+    <h1 class="heading"><span>Contacta Con</span> Nosotros</h1>
 
-<section class="book" id="book">
-  <h1 class="heading"><span>Contacta Con</span> Nosotros</h1>
+    <div class="row">
+      <div class="image">
+        <img src="../assets/img/contactus.png" alt="" />
+      </div>
 
-  <div class="row">
-    <div class="image">
-      <img src="../assets/img/contactus.png" alt="" />
+      <form id="form">
+        <h3>Nos Encantan Las Conversaciones, Hablemos.</h3>
+        <input type="text" name="from_name" id="from_name" placeholder="Nombre Completo" class="box" required />
+        <input type="number" name="phone" id="phone" placeholder="Numero de Telefono" class="box" required />
+        <input type="email" name="email_id" id="email_id" placeholder="Email" class="box" required />
+        <textarea class="box" name="message" name="message" id="message" cols="30" rows="5"
+          placeholder="Ingresa Tu Mensaje"></textarea>
+        <button>
+          <span class="shadow"></span>
+          <span class="edge"></span>
+          <span class="front text">
+            <input type="submit" class="front" id="button" value="Enviar">
+            <i class="fa-solid fa-message"></i></span>
+        </button>
+      </form>
     </div>
+  </section>
 
-    <form id="form">
-      <h3>Nos Encantan Las Conversaciones, Hablemos.</h3>
-      <input
-        type="text"
-        name="from_name"
-        id="from_name"
-        placeholder="Nombre Completo"
-        class="box"
-        required
-      />
-      <input
-        type="number"
-        name="phone"
-        id="phone"
-        placeholder="Numero de Telefono"
-        class="box"
-        required
-      />
-      <input
-        type="email"
-        name="email_id"
-        id="email_id"
-        placeholder="Email"
-        class="box"
-        required
-      />
-      <textarea
-        class="box"
-        name="message"
-        name="message"
-        id="message"
-        cols="30"
-        rows="5"
-        placeholder="Ingresa Tu Mensaje"
-      ></textarea>
-      <button>
-        <span class="shadow"></span>
-        <span class="edge"></span>
-        <span class="front text">
-          <input  type="submit" class="front" id="button" value="Enviar" >
-          <i class="fa-solid fa-message"></i
-            ></span>
-      </button>     
-    </form>
-  </div>
-</section>
-
-<!-- booking section ends -->
-
-<!-- footer section starts  -->
-
-<section class="footer">
-  <div class="credit">
-    Creado por
-    <span>Silva Donald y Gonzales Elvis</span> | Reservados todos los derechos..
-  </div>
-</section>
-
-<!-- footer section ends -->
+  <!-- booking section ends -->
 
 
+  <section class="review" id="review">
+    <h1 class="heading">Datos <span>Curiosos</span></h1>
+
+    <div class="box-container">
+      <div class="box">
+        <div class="card-img">
+          <img src="https://media.cnnchile.com/sites/2/2018/10/adolescente-durmiendo-740x430.jpg" alt="" />
+        </div>
+        <div class="card-info">
+          <h3 style="color: black">Dormir</h3>
+
+          <p class="text" style="position: relative; top: -2em">
+            Cuando duermes tu cuerpo se repara y elimina la tensión muscular
+            causada por el estrés del día. Por eso, una de las consecuencias de
+            dormir poco es que el estrés se acumula y duplica. Esto ocasiona que
+            sea más difícil enfrentar los retos del día siguiente.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="video-container">
+            <a class="btn2">
+              <span class="btn-text-one">Aprende</span>
+              <span class="btn-text-two">Great!</span>
+            </a>
+          </div>
+
+          <div class="popup-video">
+            <span class="close">&times;</span>
+            <video src="assets/img/Pine.mp4" muted autoplay controls></video>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <div class="card-img">
+          <img style="height: 12.5em"
+            src="https://i1.wp.com/lopezdoriga.com/wp-content/uploads/2019/02/video-games.jpg?fit=1200%2C645&ssl=1"
+            alt="" />
+        </div>
+        <div class="card-info">
+          <h3 style="color: black">Videojuegos</h3>
+
+          <p class="text" style="position: relative; top: -2em">
+            La naturaleza competitiva de los videojuegos puede hacernos sentir
+            estresados, enojados o frustrados. El uso indiscriminado de los
+            videojuegos no solo afectan nuestras habilidades sociales, sino que
+            también aumentan los niveles de cortisol, una hormona esteroide que es
+            un indicador de estrés.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn2">
+            <span class="btn-text-one">Hover me</span>
+            <span class="btn-text-two">Great!</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="card-img">
+          <img style="height: 12.5em"
+            src="https://media.lmneuquen.com/p/eac8bbf4c6d6f3cce9fc6b4c27991295/adjuntos/195/imagenes/004/148/0004148682/el-exceso-del-celular-puede-acercar-a-los-jovenes-a-la-depresionjpg.jpg"
+            alt="" />
+        </div>
+        <div class="card-info">
+          <h3 style="color: black">Celular</h3>
+
+          <p class="text" style="position: relative; top: -2em">
+            La adicción a los teléfonos inteligentes predice el desarrollo de
+            síntomas depresivos.Por lo cual ha empeorado las relaciones con los
+            demás y ha disminuido las habilidades sociales.
+          </p>
+        </div>
+        <div class="card-footer">
+          <div class="video-container">
+            <a class="btn2">
+              <span class="btn-text-one">Aprende</span>
+              <span class="btn-text-two">Great!</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="footer">
+    <div class="credit">
+      Creado por
+      <span>Silva Donald y Gonzales Elvis</span> | Reservados todos los derechos..
+    </div>
+   
+  </section>
+
+
+  <!-- footer section ends -->
 
 
   <!-- ========== Desplazar las cards encima del blog========== -->
@@ -137,43 +191,44 @@
 
   <!-- ========== Accessibilidad========== -->
 
-  <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "OGRNOa8KSi");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+  <script>(function (d) { var s = d.createElement("script"); s.setAttribute("data-account", "OGRNOa8KSi"); s.setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s); })(document)</script>
+  <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website
+      accessibility</a></noscript>
 
   <script src="assets/Js/scriptpagprincipal.js"></script>
   <!--Contactanos Email-->
   <!-- email -->
 
-  
-  <script type="text/javascript"
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
   <script type="text/javascript">
-      emailjs.init('q3M13USp5tT7ZFbg_')
+    emailjs.init('q3M13USp5tT7ZFbg_')
   </script>
-<script>
-  const btn = document.getElementById('button');
+  <script>
+    const btn = document.getElementById('button');
 
-  document.getElementById('form')
-          .addEventListener('submit', function (event) {
-              event.preventDefault();
+    document.getElementById('form')
+      .addEventListener('submit', function (event) {
+        event.preventDefault();
 
-              btn.value = 'Enviando...';
+        btn.value = 'Enviando...';
 
-              const serviceID = 'default_service';
-              const templateID = 'template_eax67ds';
+        const serviceID = 'default_service';
+        const templateID = 'template_eax67ds';
 
-              emailjs.sendForm(serviceID, templateID, this)
-                      .then(() => {
-                          btn.value = 'Enviar';
-                          alert('Mensaje enviado correctamente!');
-                      }, (err) => {
-                          btn.value = 'Enviar';
-                          alert(JSON.stringify(err));
-                      });
+        emailjs.sendForm(serviceID, templateID, this)
+          .then(() => {
+            btn.value = 'Enviar';
+            alert('Mensaje enviado correctamente!');
+          }, (err) => {
+            btn.value = 'Enviar';
+            alert(JSON.stringify(err));
           });
-</script>
+      });
+  </script>
 
-<!--<script type="text/javascript">
+  <!--<script type="text/javascript">
   (function () {
       var options = {
           whatsapp: "+593984772266", // WhatsApp number
@@ -188,9 +243,22 @@
       var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
   })();
 </script>-->
-<!-- /GetButton.io widget -->
+  <!-- /GetButton.io widget -->
+
+  <script>
+    document.querySelectorAll(".btn2").forEach((vid) => {
+      vid.onclick = () => {
 
 
+
+        document.querySelector(".popup-video").style.display = "block";
+
+      };
+    });
+    document.querySelector(".popup-video .close").onclick = () => {
+      document.querySelector(".popup-video").style.display = "none";
+    };
+  </script>
 
 </body>
 
