@@ -10,6 +10,7 @@
       integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
       crossorigin="anonymous"
     />
+
     <!-- ========== WebFont ========== -->
     <script
       src="https://kit.fontawesome.com/18096001b9.js"
@@ -21,6 +22,8 @@
       href="../../../assets/img/logpestañapryect.png"
     />
     <link rel="stylesheet" href="login.component.css" />
+    <link rel="stylesheet" href="../../../assets/CSS/selectTipoUser.css" />
+
     <title>signin-signup</title>
   </head>
 
@@ -55,7 +58,63 @@
           </div>
         </form>
         <form action="" class="sign-up-form">
-          <h2 class="title">Regístrarse</h2>
+          <h2 class="title" style="position: relative; top: 1em">
+            Regístrarse
+          </h2>
+
+          <div class="contenedor">
+            <div
+              class="selectbox"
+              style="position: relative; top: -0.2em; right: 7.5em"
+            >
+              <div class="select" id="select">
+                <div class="contenido-select">
+                  <h1 class="titulo">Selecciona el tipo de usuario</h1>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </div>
+
+              <div class="opciones" id="opciones">
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/2345/2345338.png"
+                      alt=""
+                    />
+                    <div class="textos">
+                      <h1 class="titulo">Administrador</h1>
+                      <p class="descripcion">Su cuenta sera verificada.</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3475/3475916.png"
+                      alt=""
+                    />
+                    <div class="textos">
+                      <h1 class="titulo">Psicologo</h1>
+                      <p class="descripcion">Su cuenta sera verificada.</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion">
+                  <div class="contenido-opcion">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/4113/4113047.png"
+                      alt=""
+                    />
+                    <div class="textos">
+                      <h1 class="titulo">Paciente</h1>
+                      <p class="descripcion">Su cuenta no sera verificada.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div class="input-field">
             <i class="fa-solid fa-user-tie"></i>
             <input type="text" placeholder="Nombre Completo" />
@@ -135,5 +194,6 @@
       </div>
     </div>
     <script src="../../../assets/Js/scriplogin.js"></script>
+    <script src="../../../assets/Js/selectipouser.js"></script>
   </body>
 </html>

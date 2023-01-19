@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 :root {
-  --green: #16a085;
+  --green: #ffd100;
   --black: #444;
   --light-color: #777;
   --box-shadow: 0.5rem 0.5rem 0 rgba(22, 160, 133, 0.2);
@@ -20,7 +20,6 @@
   transition: all 0.2s ease-out;
   text-decoration: none;
 }
-
 html {
   font-size: 62.5%;
   overflow-x: hidden;
@@ -59,7 +58,7 @@ section:nth-child(even) {
   border: var(--border);
   border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
-  color: var(--green);
+  color: #06d6a0;
   cursor: pointer;
   font-size: 1.7rem;
   background: #fff;
@@ -114,7 +113,7 @@ section:nth-child(even) {
 }
 
 .header .navbar a:hover {
-  color: var(--green);
+  color: #fff;
 }
 
 #menu-btn {
@@ -302,7 +301,7 @@ section:nth-child(even) {
   width: 5rem;
   line-height: 4.5rem;
   font-size: 2rem;
-  color: var(--green);
+  color: #118ab2;
   border-radius: 0.5rem;
   border: var(--border);
   margin: 0.3rem;
