@@ -2,158 +2,195 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Perfil del Paciente</title>
-
-    <!-- font awesome cdn link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-    />
-
+    <link rel="stylesheet" href="perfiluser.component.css" />
+    <link rel="stylesheet" href="../../../assets/CSS/popup.css" />
+    <link rel="stylesheet" href="../../../assets/CSS/whatsaap.css" />
+    <!--Icono-->
     <link
       rel="icon"
       type="image/x-icon"
       href="../../../assets/img/logpestañapryect.png"
     />
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="perfiluser.component.css" />
+    <title>Paciente Panel</title>
   </head>
   <body>
-    <!-- header section starts  -->
-
-    <header>
-      <div class="user">
-        <img src="../../../assets/img/FotoPerfilDonald.png" alt="" />
-        <h3 class="name">Donald Silva</h3>
-        <p class="post"><strong>Tipo de usuario:</strong> Paciente</p>
+    <div class="side-menu">
+      <div class="brand-name">
+        <img
+          width="80em;"
+          src="../../../assets/img/logpestañapryect.png"
+          alt=""
+        />
       </div>
-
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home">home</a></li>
-          <li><a href="#about">Datos Personales</a></li>
-          <li><a href="#service">service</a></li>
-          <li><a href="#eduscation">Reportes de Test</a></li>
-          <li><a href="#contact">Contactos</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- header section ends -->
-
-    <!-- content section starts  -->
-
+      <div class="titulo">
+        <h1 style="font-weight: bold; right: -1.5em; position: relative">
+          HealthTest
+        </h1>
+      </div>
+      <br />
+      <ul>
+        <li>
+          <a href="#">
+            <img
+              width="40 em;"
+              src="https://cdn-icons-png.flaticon.com/512/3015/3015458.png"
+              alt=""
+            />&nbsp;&nbsp; <span>Home</span>
+          </a>
+        </li>
+        <li style="height: 3em">
+          <a href="#" style="top: 0.5em; position: relative">
+            <img
+              style="width: 2em; right: 4em"
+              src="https://www.reshot.com/preview-assets/icons/P2HG7FN8CT/online-report-P2HG7FN8CT.svg"
+            />
+            <span style="top: -0.5em; right: -0.1em; position: relative">
+              Reporte Test
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" style="top: 0.5em; position: relative">
+            <img
+              style="width: 2em; right: 4em"
+              src="https://www.reshot.com/preview-assets/icons/8H2QZ93G6J/student-profile-8H2QZ93G6J.svg"
+            />
+            <span style="top: -0.5em; right: -0.1em; position: relative">
+              Editar Perfil
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" style="top: 0.5em; position: relative">
+            <img
+              style="width: 2em; right: 4em"
+              src="https://www.reshot.com/preview-assets/icons/U2VGMWYXFN/customer-service-U2VGMWYXFN.svg"
+            />
+            <span style="top: -0.5em; right: -0.1em; position: relative">
+              Contáctanos
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
     <div class="container">
-      <section class="home" id="home">
-        <h3>hi there...</h3>
-        <h3 class="name">my name is <span>shaikh anas</span></h3>
-        <h3 class="post">
-          i am a <span class="typing-text">front end developer</span>
-        </h3>
-
-        <a href="#"><button class="btn">hire me</button></a>
-
-        <div class="share">
-          <a href="#" class="fab fa-facebook-f"></a>
-          <a href="#" class="fab fa-twitter"></a>
-          <a href="#" class="fab fa-instagram"></a>
-          <a href="#" class="fab fa-pinterest"></a>
-          <a href="#" class="fab fa-linkedin"></a>
-        </div>
-      </section>
-
-      <!-- about section  -->
-
-      <section class="about" id="about">
-        <h1 class="heading">about me</h1>
-
-        <div class="content">
-          <h3 class="name">my name is <span>shaikh anas</span></h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos
-            ipsam, temporibus veritatis sed dignissimos. Ratione consequuntur
-            sapiente reiciendis dolorem.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-            iusto hic neque illo dolorem facere laborum quam inventore
-            architecto voluptates totam quo corrupti assumenda nihil voluptatum
-            optio ullam cupiditate excepturi?
-          </p>
-        </div>
-
-        <div class="skills">
-          <div class="progress">
-            <h3>html <span>95%</span></h3>
-            <div class="bar"><span></span></div>
+      <div class="header">
+        <div class="nav">
+          <div class="search">
+            <input type="text" placeholder="Search.." />
+            <button type="submit">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4991/4991078.png"
+                alt=""
+              />
+            </button>
           </div>
-          <div class="progress">
-            <h3>css <span>85%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>javascript <span>65%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>photoshop <span>70%</span></h3>
-            <div class="bar"><span></span></div>
+          <div class="user">
+            <a href="#" class="btn">Add New</a>
+            <img src="notifications.png" alt="" />
+            <div class="img-case">
+              <img src="user.png" alt="" />
+            </div>
           </div>
         </div>
-      </section>
-
-      <!-- service section  -->
-      <section class="service" id="service">
-        <h1 class="heading">my services</h1>
-
-        <div class="box-container">
-          <div class="box">
-            <i class="fab fa-html5"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
+      </div>
+      <div class="content">
+        <section class="home" id="home">
+          <br />
+          <div class="image">
+            <img src="../../../assets/img/Logo3PrName.png" alt="" />
           </div>
+          <h3>Es muy bonito que estés de nuevo entre nosotros</h3>
+          <h4 class="name"><span>Bienvenido a HealthTest</span></h4>
+          <h3 class="post">
+            <span>Tipos de Tets: </span>
+            <span class="typing-text">front end developer</span>
+          </h3>
+          <br />
+          <div class="popup center">
+            <div class="image">
+              <img
+                style="width: 4em"
+                src="https://cdn-icons-png.flaticon.com/512/3403/3403541.png"
+              />
+            </div>
+            <div class="title">¡Empecemos!</div>
 
-          <div class="box">
-            <i class="fab fa-css3"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
+            <div class="description">
+              <a href="#">
+                <button class="continue-application">
+                  <div>
+                    <div class="pencil"></div>
+                    <div class="folder">
+                      <div class="top">
+                        <svg viewBox="0 0 24 27">
+                          <path
+                            d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="paper"></div>
+                    </div>
+                  </div>
+                  Realizar Test De Estrés
+                </button>
+              </a>
+              <br /><br />
+              <a href="#">
+                <button class="continue-application">
+                  <div>
+                    <div class="pencil"></div>
+                    <div class="folder">
+                      <div class="top">
+                        <svg viewBox="0 0 24 27">
+                          <path
+                            d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="paper"></div>
+                    </div>
+                  </div>
+                  Realizar Test De Ansiedad
+                </button>
+              </a>
+              <br /><br />
+              <a href="#">
+                <button class="continue-application">
+                  <div>
+                    <div class="pencil"></div>
+                    <div class="folder">
+                      <div class="top">
+                        <svg viewBox="0 0 24 27">
+                          <path
+                            d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <div class="paper"></div>
+                    </div>
+                  </div>
+                  Realizar Test De Depresión
+                </button>
+              </a>
+            </div>
+            <div class="dismiss-btn">
+              <button id="dismiss-popup-btn">&times;</button>
+            </div>
           </div>
-
-          <div class="box">
-            <i class="fab fa-js"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
+          <div class="button-borders">
+            <a href="#"
+              ><button class="primary-button" id="open-popup-btn">
+                Realizar Tests
+              </button></a
+            >
           </div>
-
-          <div class="box">
-            <i class="fab fa-wordpress"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fas fa-paint-brush"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fas fa-bullhorn"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <!-- boton del wassap -->
       <a
-        style="top: 13em; right: 0.2em"
         href="https://api.whatsapp.com/send/?phone=593984772266&text=Hola%2C+%C2%BFc%C3%B3mo+podemos+ayudarte%3F+Env%C3%ADanos+un+mensaje+&type=phone_number&app_absent=0"
         class="btn-wsp"
         target="_blank"
@@ -161,132 +198,15 @@
         <i class="fa fa-whatsapp icono"></i>
       </a>
       <!-- Fin del boton del wassap -->
-
-      <!-- education section  -->
-
-      <section class="education" id="education">
-        <h1 class="heading">my education</h1>
-
-        <div class="box-container">
-          <div class="box">
-            <div class="year">2017 - 2018</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="year">2018 - 2019</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="year">2019 - 2020</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="year">2020 - 2021</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- contact section  -->
-      <section class="contact" id="contact">
-        <h1 class="heading">contact me</h1>
-
-        <div class="row">
-          <form action="">
-            <input type="text" class="box" placeholder="first name" />
-            <input type="text" class="box" placeholder="last name" />
-            <input type="email" class="box" placeholder="your email" />
-            <input type="text" class="box" placeholder="your project" />
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              class="box message"
-              placeholder="message"
-            ></textarea>
-            <input type="submit" value="message" class="btn" />
-          </form>
-
-          <div class="content">
-            <div class="icons">
-              <h3><i class="fas fa-map-marker-alt"></i> address</h3>
-              <p>mumbai, india 400104</p>
-            </div>
-            <div class="icons">
-              <h3><i class="fas fa-envelope"></i> email</h3>
-              <p>shaikh@gmail.com</p>
-            </div>
-            <div class="icons">
-              <h3><i class="fas fa-phone"></i> phone</h3>
-              <p>+123-456-7890</p>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
-
-    <!-- content section ends -->
-
-    <!-- theme toggler  -->
-
-    <div class="theme-toggler">
-      <span
-        style="
-          background: linear-gradient(
-            0deg,
-            rgba(195, 191, 34, 1) 32%,
-            rgba(234, 253, 45, 0.8603816526610644) 59%
-          );
-        "
-      ></span>
-      <span
-        style="
-          background: linear-gradient(
-            0deg,
-            rgba(233, 196, 106, 1) 37%,
-            rgba(244, 162, 97, 1) 64%
-          );
-        "
-      ></span>
-      <span style="background: rgb(255, 151, 112)"></span>
-      <span style="background: linear-gradient(coral, blueviolet)"></span>
-      <span style="background: linear-gradient(#999, #111)"></span>
-    </div>
-
-    <!-- type.js cdn link  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-
     <script>
       var type = new Typed(".typing-text", {
         strings: [
-          "web designer",
-          "front end developer",
-          "graphic designer",
-          "photographer",
+          "Tipos de Test",
+          "Test de Estrés",
+          "Test de Ansiedad",
+          "Test de Depresión",
         ],
         typeSpeed: 120,
         loop: true,
@@ -312,5 +232,7 @@
       >Please ensure Javascript is enabled for purposes of
       <a href="https://userway.org">website accessibility</a></noscript
     >
+    <!--Popupscrip-->
+    <script src="../../../assets/Js/popup.js"></script>
   </body>
 </html>
