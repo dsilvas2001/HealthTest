@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CargarScriptsService } from 'src/app/cargar-scripts.service';
+
 
 @Component({
   selector: 'app-perfiluser',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class PerfiluserComponent {
 
+  constructor(private _CargarScriptsuser: CargarScriptsService){
+    _CargarScriptsuser.popuptest(["popup"]);
+   
+   
+   
+  }
+
+  ngOnInit() { 
+  }
 }

@@ -1,3 +1,106 @@
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+.bottom-right {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup {
+  width: 750px;
+  height: 410px;
+  padding: 30px 20px;
+  background: #fee440;
+  border-radius: 10px;
+  box-sizing: border-box;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  top: -200%;
+  transform: translate(-50%, -50%) scale(0.5);
+  transition: opacity 300ms ease-in-out, top 1000ms ease-in-out,
+    transform 1000ms ease-in-out;
+}
+.popup.active {
+  opacity: 1;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms cubic-bezier(0.18, 0.89, 0.43, 1.19);
+}
+.popup .icon {
+  margin: 5px 0px;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #34f234;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 60px;
+}
+.popup .icon i.fa {
+  font-size: 30px;
+  color: #34f234;
+}
+.popup .title {
+  margin: 5px 0px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.popup .description {
+  color: #222;
+  font-size: 15px;
+  padding: 5px;
+}
+.popup .dismiss-btn {
+  margin-top: 15px;
+}
+.popup .dismiss-btn button {
+  padding: 10px 20px;
+  background: #ffb703;
+  color: #f5f5f5;
+  border: 2px solid #111;
+  font-size: 16px;
+  font-weight: 600;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+
+  position: absolute;
+  top: -24em;
+  right: 1.3px;
+}
+.popup .dismiss-btn button:hover {
+  color: #111;
+  background: #f5f5f5;
+}
+.popup > div {
+  position: relative;
+  top: 10px;
+  opacity: 0;
+}
+.popup.active > div {
+  top: 0px;
+  opacity: 1;
+}
+.popup.active .icon {
+  transition: all 300ms ease-in-out 250ms;
+}
+.popup.active .title {
+  transition: all 300ms ease-in-out 300ms;
+}
+.popup.active .description {
+  transition: all 300ms ease-in-out 350ms;
+}
+.popup.active .dismiss-btn {
+  transition: all 300ms ease-in-out 400ms;
+}
+/*Fin del popup*/
 * {
   margin: 0;
   padding: 0;
@@ -69,7 +172,7 @@ td {
   align-items: center;
 }
 .side-menu li:hover {
-  background: white;
+  background: #fff;
   color: #f05462;
 }
 .container {
@@ -206,7 +309,9 @@ td {
   padding-bottom: 10rem;
 }
 .container .content .home .image img {
-  width: 16em;
+  width: 50em;
+  right: -6em;
+  position: relative;
 }
 
 .home .name span {
@@ -572,5 +677,34 @@ td {
   .container .content .content-2 .recent-payments table th:nth-child(2),
   .container .content .content-2 .recent-payments table td:nth-child(2) {
     display: none;
+  }
+}
+/*Boton del wassap*/
+.btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 63px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: all 300ms ease;
+}
+.btn-wsp:hover {
+  background: #fff;
+  color: #20ba5a;
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .btn-wsp {
+    width: 63px;
+    height: 63px;
+    top: 13em;
+    line-height: 66px;
   }
 }

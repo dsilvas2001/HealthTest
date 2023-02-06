@@ -1,0 +1,32 @@
+<body>
+  <header class="header">
+    <a href="/paginaprincipal" class="logo"> HealthTest. </a>
+    <nav class="navbar" style="right: -2em; position: relative">
+      <ul>
+        <li><a href="#home">home</a></li>
+        <li><a href="#services">Nuestros Servicios</a></li>
+        <li><a href="#about">Sobre Nosotros</a></li>
+        <li>
+          <a href="#">Test</a>
+          <ul>
+            <li><a routerLink="/testestresinfo">Test de Estres</a></li>
+            <li><a routerLink="/testansiedadinfo">Test de Ansiedad</a></li>
+            <li><a routerLink="/testdepresioninfo">Test de Depresión</a></li>
+          </ul>
+        </li>
+        <li><a href="#doctors">Creadores</a></li>
+        <li><a href="#book">Contactos</a></li>
+        <li><a href="#review">DATOS CURIOSOS</a></li>
+        <li><a href="#blogs">Blogs</a></li>
+        <li>
+          <a href="#">Iniciar Sesión</a>
+          <ul>
+            <li><a [routerLink]="['/login']">¿Deseas acceder?</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+  </header>
+</body>

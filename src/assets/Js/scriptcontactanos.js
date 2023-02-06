@@ -1,12 +1,23 @@
-function SendMail() {
-  var params = {
-    from_name: document.getElementById("fullname").value,
-    to_name: document.getElementById("fullname").value,
-    message: document.getElementById("message").value,
-    email_id: document.getElementById("email_id").value,
-    phone: document.getElementById("phone_id").value,
-  };
-  emailjs
-    .send("service_24y20nm", "template_pgv4efl", params)
-    .then((message) => alert(message));
-}
+
+
+const btn = document.getElementById("button");
+
+  document.getElementById("form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    btn.value = "Enviando...";
+
+    const serviceID = "default_service";
+    const templateID = "template_eax67ds";
+
+    emailjs.sendForm(serviceID, templateID, this).then(
+      () => {
+        btn.value = "Enviar";
+        alert("Mensaje enviado correctamente!");
+      },
+      (err) => {
+        btn.value = "Enviar";
+        alert(JSON.stringify(err));
+      }
+    );
+  });

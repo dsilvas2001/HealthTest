@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="perfiluser.component.css" />
-    <link rel="stylesheet" href="../../../assets/CSS/popup.css" />
-    <link rel="stylesheet" href="../../../assets/CSS/whatsaap.css" />
+
     <!--Icono-->
     <link
       rel="icon"
@@ -17,19 +16,30 @@
   </head>
   <body>
     <div class="side-menu">
+      <br />
       <div class="brand-name">
         <img
-          width="80em;"
+          style="width: 20em"
           src="../../../assets/img/logpestañapryect.png"
           alt=""
         />
       </div>
+      <br />
+      <br />
       <div class="titulo">
-        <h1 style="font-weight: bold; right: -1.5em; position: relative">
-          HealthTest
+        <h1
+          style="
+            font-size: 4em;
+            font-weight: bold;
+            right: -2.2em;
+            position: relative;
+          "
+        >
+          <span> HealthTest</span>
         </h1>
       </div>
       <br />
+
       <ul>
         <li>
           <a href="#">
@@ -37,7 +47,8 @@
               width="40 em;"
               src="https://cdn-icons-png.flaticon.com/512/3015/3015458.png"
               alt=""
-            />&nbsp;&nbsp; <span>Home</span>
+            />&nbsp;&nbsp;
+            <span style="font-size: 1em; font-weight: bold">Home</span>
           </a>
         </li>
         <li style="height: 3em">
@@ -45,8 +56,16 @@
             <img
               style="width: 2em; right: 4em"
               src="https://www.reshot.com/preview-assets/icons/P2HG7FN8CT/online-report-P2HG7FN8CT.svg"
-            />
-            <span style="top: -0.5em; right: -0.1em; position: relative">
+            />&nbsp;
+            <span
+              style="
+                font-size: 0.8em;
+                font-weight: bold;
+                top: -0.5em;
+                right: -0.1em;
+                position: relative;
+              "
+            >
               Reporte Test
             </span>
           </a>
@@ -56,8 +75,16 @@
             <img
               style="width: 2em; right: 4em"
               src="https://www.reshot.com/preview-assets/icons/8H2QZ93G6J/student-profile-8H2QZ93G6J.svg"
-            />
-            <span style="top: -0.5em; right: -0.1em; position: relative">
+            />&nbsp;
+            <span
+              style="
+                font-size: 0.8em;
+                font-weight: bold;
+                top: -0.5em;
+                right: -0.1em;
+                position: relative;
+              "
+            >
               Editar Perfil
             </span>
           </a>
@@ -67,8 +94,16 @@
             <img
               style="width: 2em; right: 4em"
               src="https://www.reshot.com/preview-assets/icons/U2VGMWYXFN/customer-service-U2VGMWYXFN.svg"
-            />
-            <span style="top: -0.5em; right: -0.1em; position: relative">
+            />&nbsp;
+            <span
+              style="
+                font-size: 0.8em;
+                font-weight: bold;
+                top: -0.5em;
+                right: -0.1em;
+                position: relative;
+              "
+            >
               Contáctanos
             </span>
           </a>
@@ -102,17 +137,18 @@
           <div class="image">
             <img src="../../../assets/img/Logo3PrName.png" alt="" />
           </div>
-          <h3>Es muy bonito que estés de nuevo entre nosotros</h3>
+          <h1 class="name">
+            <span> Es muy bonito que estés de nuevo entre nosotros</span>
+          </h1>
           <h4 class="name"><span>Bienvenido a HealthTest</span></h4>
           <h3 class="post">
             <span>Tipos de Tets: </span>
-            <span class="typing-text">front end developer</span>
           </h3>
           <br />
           <div class="popup center">
-            <div class="image">
+            <div>
               <img
-                style="width: 4em"
+                style="width: 10em"
                 src="https://cdn-icons-png.flaticon.com/512/3403/3403541.png"
               />
             </div>
@@ -183,12 +219,14 @@
           <div class="button-borders">
             <a href="#"
               ><button class="primary-button" id="open-popup-btn">
-                Realizar Tests
+                Visualizar Tests
               </button></a
             >
           </div>
         </section>
+        <app-footer></app-footer>
       </div>
+
       <!-- boton del wassap -->
       <a
         href="https://api.whatsapp.com/send/?phone=593984772266&text=Hola%2C+%C2%BFc%C3%B3mo+podemos+ayudarte%3F+Env%C3%ADanos+un+mensaje+&type=phone_number&app_absent=0"
@@ -199,40 +237,5 @@
       </a>
       <!-- Fin del boton del wassap -->
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <script>
-      var type = new Typed(".typing-text", {
-        strings: [
-          "Tipos de Test",
-          "Test de Estrés",
-          "Test de Ansiedad",
-          "Test de Depresión",
-        ],
-        typeSpeed: 120,
-        loop: true,
-      });
-
-      let themeColor = document.querySelectorAll(".theme-toggler span");
-      themeColor.forEach((color) =>
-        color.addEventListener("click", () => {
-          let background = color.style.background;
-          document.querySelector("body").style.background = background;
-        })
-      );
-    </script>
-    <script>
-      (function (d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "OGRNOa8KSi");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        (d.body || d.head).appendChild(s);
-      })(document);
-    </script>
-    <noscript
-      >Please ensure Javascript is enabled for purposes of
-      <a href="https://userway.org">website accessibility</a></noscript
-    >
-    <!--Popupscrip-->
-    <script src="../../../assets/Js/popup.js"></script>
   </body>
 </html>

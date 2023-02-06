@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
@@ -16,19 +17,12 @@
       src="https://kit.fontawesome.com/18096001b9.js"
       crossorigin="anonymous"
     ></script>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="../../../assets/img/logpestañapryect.png"
-    />
-    <link rel="stylesheet" href="login.component.css" />
-    <link rel="stylesheet" href="../../../assets/CSS/selectTipoUser.css" />
-
-    <title>signin-signup</title>
   </head>
 
   <body>
     <div class="container">
+      <app-menu></app-menu>
+
       <div class="signin-signup">
         <form action="" class="sign-in-form">
           <h2 class="title">Iniciar Sesión</h2>
@@ -40,7 +34,19 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Contraseña" />
           </div>
-          <input type="submit" value="Acceder" class="btn" />
+          <a href="/perfiluser" class="btn" style="font-size: 1.5em">
+            <p
+              style="
+                color: bisque;
+                right: -1.5em;
+                position: relative;
+                top: 0.5em;
+              "
+            >
+              Acceder
+            </p>
+          </a>
+
           <p class="social-text">O Iniciar Sesión con la Plataforma Social</p>
           <div class="social-media">
             <a href="#" class="social-icon">
@@ -57,19 +63,24 @@
             </a>
           </div>
         </form>
+
         <form action="" class="sign-up-form">
+          <br />
+          <br />
           <h2 class="title" style="position: relative; top: 1em">
             Regístrarse
           </h2>
-
+          <br />
           <div class="contenedor">
             <div
               class="selectbox"
-              style="position: relative; top: -0.2em; right: 7.5em"
+              style="position: relative; top: -1em; right: 7em"
             >
-              <div class="select" id="select">
+              <div class="select" id="select" style="height: 0.1em">
                 <div class="contenido-select">
-                  <h1 class="titulo">Selecciona el tipo de usuario</h1>
+                  <h1 class="titulo">
+                    Selecciona &nbsp; el &nbsp; tipo &nbsp;de&nbsp; usuario
+                  </h1>
                 </div>
                 <i class="fas fa-angle-down"></i>
               </div>
@@ -155,6 +166,7 @@
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
+            <br /><br /><br />
             <h3>¿Ya tienes una cuenta en HealthTest?</h3>
             <p>Te ofrecemos Iniciar Sesión para acceder a nuestra página.</p>
             <button class="btn" id="sign-in-btn">
@@ -193,7 +205,5 @@
         </div>
       </div>
     </div>
-    <script src="../../../assets/Js/scriplogin.js"></script>
-    <script src="../../../assets/Js/selectipouser.js"></script>
   </body>
 </html>

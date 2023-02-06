@@ -16,7 +16,7 @@ body {
 .container {
   position: relative;
   width: 70vw;
-  height: 92vh;
+  height: 98vh;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
@@ -113,6 +113,7 @@ form.sign-up-form {
   width: 150px;
   height: 50px;
   border: none;
+
   border-radius: 50px;
   --arrow-width: 10px;
   --arrow-stroke: 2px;
@@ -329,5 +330,145 @@ a {
 @media (max-width: 320px) {
   form {
     width: 90%;
+  }
+}
+
+/*tipo de usuario*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.contenedor {
+  width: 30em;
+  height: 6em;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.selectbox {
+  width: 50%;
+  margin: auto;
+  position: relative;
+}
+
+.select {
+  background: #fff;
+  height: 0.1rem;
+  width: 160%;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.16);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.2s ease all;
+  margin-bottom: 30px;
+  padding: 30px;
+  position: relative;
+  border: 2px solid transparent;
+}
+/*Combox Border*/
+.select.active,
+.select:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+  border: 2px solid #213f8f;
+}
+/*flechita del combox*/
+.select.active:before {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+  border-top: 15px solid #213f8f;
+  border-right: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid transparent;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 15px);
+}
+
+.select i {
+  font-size: 60px;
+  margin-left: 30px;
+  color: #213f8f;
+}
+
+.titulo {
+  margin-bottom: 5px;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.descripcion {
+  font-size: 15px;
+  color: #434343;
+}
+/*ventana del tipo de usuario*/
+.opciones {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.16);
+  max-height: 200px;
+  overflow: auto;
+  z-index: 100;
+  width: 140%;
+  display: none;
+}
+
+.opciones.active {
+  display: block;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-200px) scale(0.5);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+/*donde esta pintado del tipo de usuario*/
+.contenido-opcion {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.2s ease all;
+}
+
+.opciones .contenido-opcion {
+  padding: 10px;
+}
+
+.contenido-opcion img {
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.opciones .contenido-opcion:hover {
+  background: #d5a021;
+}
+
+.opciones .contenido-opcion:hover .titulo,
+.opciones .contenido-opcion:hover .descripcion {
+  color: #fff;
+}
+
+@media screen and (max-width: 800px) {
+  .selectbox {
+    width: 100%;
   }
 }
