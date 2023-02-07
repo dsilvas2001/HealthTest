@@ -12,6 +12,11 @@ import { EstresnosiempreesmaloComponent } from './componentes/estresnosiempreesm
 import { EstressintomasComponent } from './componentes/estressintomas/estressintomas.component';
 import { BlogestresComponent } from './componentes/blogestres/blogestres.component';
 import { ControlarestresComponent } from './componentes/controlarestres/controlarestres.component';
+import { TestqueesansiedadComponent } from './componentes/testqueesansiedad/testqueesansiedad.component';
+import { BlogansiedadComponent } from './componentes/blogansiedad/blogansiedad.component';
+import { SintomasansiedadComponent } from './componentes/sintomasansiedad/sintomasansiedad.component';
+import { PreveniransiedadComponent } from './componentes/preveniransiedad/preveniransiedad.component';
+import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepresion.component';
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
@@ -26,6 +31,12 @@ const routes: Routes = [
   {path: 'estressintomas', component: EstressintomasComponent},
   {path: 'blogestres', component: BlogestresComponent},
   {path: 'controlarestres', component: ControlarestresComponent},
+  {path: 'testqueesansiedad', component: TestqueesansiedadComponent},
+  {path: 'blogansiedad', component: BlogansiedadComponent},
+  {path: 'sintomasansiedad', component: SintomasansiedadComponent},
+  {path: 'preveniransiedad', component: PreveniransiedadComponent},
+  {path: 'queesdepresion', component: QueesdepresionComponent},
+
 ];
 
 @NgModule({

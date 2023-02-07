@@ -21,6 +21,13 @@ import { EstresnosiempreesmaloComponent } from './componentes/estresnosiempreesm
 import { EstressintomasComponent } from './componentes/estressintomas/estressintomas.component';
 import { BlogestresComponent } from './componentes/blogestres/blogestres.component';
 import { ControlarestresComponent } from './componentes/controlarestres/controlarestres.component';
+import { TestqueesansiedadComponent } from './componentes/testqueesansiedad/testqueesansiedad.component';
+import { BlogansiedadComponent } from './componentes/blogansiedad/blogansiedad.component';
+import { MenuansiedadComponent } from './componentes/menuansiedad/menuansiedad.component';
+import { SintomasansiedadComponent } from './componentes/sintomasansiedad/sintomasansiedad.component';
+import { PreveniransiedadComponent } from './componentes/preveniransiedad/preveniransiedad.component';
+import { MenudepresionComponent } from './componentes/menudepresion/menudepresion.component';
+import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepresion.component';
 
 
 
@@ -40,7 +47,14 @@ import { ControlarestresComponent } from './componentes/controlarestres/controla
     EstresnosiempreesmaloComponent,
     EstressintomasComponent,
     BlogestresComponent,
-    ControlarestresComponent
+    ControlarestresComponent,
+    TestqueesansiedadComponent,
+    BlogansiedadComponent,
+    MenuansiedadComponent,
+    SintomasansiedadComponent,
+    PreveniransiedadComponent,
+    MenudepresionComponent,
+    QueesdepresionComponent
   ],
   imports: [
     BrowserModule,

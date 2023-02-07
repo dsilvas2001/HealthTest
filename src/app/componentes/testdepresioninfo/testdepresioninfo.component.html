@@ -10,39 +10,7 @@
   </head>
 
   <body>
-    <header class="header">
-      <a href="/paginaprincipal" class="logo"> HealthTest. </a>
-      <nav class="navbar" style="right: -2em; position: relative">
-        <ul>
-          <li><a href="#home">home</a></li>
-          <li><a href="#services">Nuestros Servicios</a></li>
-          <li><a href="#about">Sobre Nosotros</a></li>
-          <li>
-            <a href="#">Test</a>
-            <ul>
-              <li><a routerLink="/testestresinfo">Test de Estres</a></li>
-              <li><a href="#">Test de Ansiedad</a></li>
-              <li><a href="#">Test de Depresión</a></li>
-            </ul>
-          </li>
-          <li><a href="#doctors">Creadores</a></li>
-          <li><a href="#book">Contactos</a></li>
-          <li><a href="#review">DATOS CURIOSOS</a></li>
-          <li><a href="#blogs">Blogs</a></li>
-          <li>
-            <a href="#">Iniciar Sesión</a>
-            <ul>
-              <li>
-                <a href="/login">¿Deseas acceder?</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-
-      <div id="menu-btn" class="fas fa-bars"></div>
-    </header>
-
+    <app-menudepresion></app-menudepresion>
     <!-- header section ends -->
 
     <!-- home section starts  -->
@@ -142,31 +110,7 @@
 
     <!-- about section starts  -->
 
-    <section class="about" id="about">
-      <h1 class="heading"><span>Sobre</span> Nosotros</h1>
-
-      <div class="row">
-        <div class="image">
-          <img src="../../../assets/img/brainemotional.png" alt="" />
-        </div>
-
-        <div class="content">
-          <h3>La base para la felicidad es la salud</h3>
-          <p>
-            Todos merecemos ser felices Si estás lidiando con un reto en tu vida
-            o te sientes atrapada/o en patrones que se han repetido por largo
-            tiempo y no encuentras la salida, es momento de comenzar el camino
-            hacia un lugar mejor.
-          </p>
-          <p>
-            Por ello, es importante controlar nuestros niveles de estrés.
-            <strong>¿Quieres saber cómo hacerlo?</strong> No dudes en realizar
-            este test de estrés para determinar cuál es el tratamiento que mejor
-            funciona y te aporta estabilidad mental.
-          </p>
-        </div>
-      </div>
-    </section>
+    <app-queesdepresion></app-queesdepresion>
 
     <!-- about section ends -->
 

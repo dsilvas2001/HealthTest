@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 
 @Component({
   selector: 'app-testestresinfo',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./testestresinfo.component.css']
 })
 export class TestestresinfoComponent {
+  constructor(private _CargarScripts: CargarScriptsService){
+    _CargarScripts.Webfont();
+    _CargarScripts.Email();
+    _CargarScripts.linkemail(["linkemail"]);
+    _CargarScripts.Emailcontact(["scriptcontactanos"]);
+    _CargarScripts.Videoprincipal(["video"]);
+  }
   ngOnInit(){
     this.cargarestilo();
 }
