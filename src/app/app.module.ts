@@ -28,6 +28,7 @@ import { SintomasansiedadComponent } from './componentes/sintomasansiedad/sintom
 import { PreveniransiedadComponent } from './componentes/preveniransiedad/preveniransiedad.component';
 import { MenudepresionComponent } from './componentes/menudepresion/menudepresion.component';
 import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepresion.component';
+import { BlogsdepresionComponent } from './componentes/blogsdepresion/blogsdepresion.component';
 
 
 
@@ -54,7 +55,8 @@ import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepre
     SintomasansiedadComponent,
     PreveniransiedadComponent,
     MenudepresionComponent,
-    QueesdepresionComponent
+    QueesdepresionComponent,
+    BlogsdepresionComponent
   ],
   imports: [
     BrowserModule,
