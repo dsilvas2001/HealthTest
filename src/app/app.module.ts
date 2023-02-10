@@ -29,7 +29,16 @@ import { PreveniransiedadComponent } from './componentes/preveniransiedad/preven
 import { MenudepresionComponent } from './componentes/menudepresion/menudepresion.component';
 import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepresion.component';
 import { BlogsdepresionComponent } from './componentes/blogsdepresion/blogsdepresion.component';
+import { SintomasdepresionComponent } from './componentes/sintomasdepresion/sintomasdepresion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
 
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { environment } from 'src/environments/environment';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { PaginaadminComponent } from './componentes/paginaadmin/paginaadmin.component';
 
 
 @NgModule({
@@ -56,11 +65,19 @@ import { BlogsdepresionComponent } from './componentes/blogsdepresion/blogsdepre
     PreveniransiedadComponent,
     MenudepresionComponent,
     QueesdepresionComponent,
-    BlogsdepresionComponent
+    BlogsdepresionComponent,
+    SintomasdepresionComponent,
+    PaginaadminComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore())
   ],
   providers: [
     CargarScriptsService

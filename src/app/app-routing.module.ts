@@ -17,6 +17,10 @@ import { BlogansiedadComponent } from './componentes/blogansiedad/blogansiedad.c
 import { SintomasansiedadComponent } from './componentes/sintomasansiedad/sintomasansiedad.component';
 import { PreveniransiedadComponent } from './componentes/preveniransiedad/preveniransiedad.component';
 import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepresion.component';
+import { SintomasdepresionComponent } from './componentes/sintomasdepresion/sintomasdepresion.component';
+import { BlogsdepresionComponent } from './componentes/blogsdepresion/blogsdepresion.component';
+import { PaginaadminComponent } from './componentes/paginaadmin/paginaadmin.component';
+
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
@@ -36,6 +40,10 @@ const routes: Routes = [
   {path: 'sintomasansiedad', component: SintomasansiedadComponent},
   {path: 'preveniransiedad', component: PreveniransiedadComponent},
   {path: 'queesdepresion', component: QueesdepresionComponent},
+  {path: 'sintomasdepresion', component: SintomasdepresionComponent},
+  {path: 'blogsdepresion', component: BlogsdepresionComponent},
+  {path: 'paginaadmin', component: PaginaadminComponent},
+
 
 ];
 

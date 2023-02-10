@@ -22,319 +22,251 @@
       href="../../../assets/img/logpestañapryect.png"
     />
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="perfiluser.component.css" />
+    <link rel="stylesheet" href="prueba.css" />
     <link rel="stylesheet" href="../../../assets/CSS/popup.css" />
   </head>
   <body>
     <!-- header section starts  -->
 
-    <header>
-      <div class="user">
-        <img src="../../../assets/img/FotoPerfilDonald.png" alt="" />
-        <h3 class="name">Donald Silva</h3>
-        <p class="post"><strong>Tipo de usuario:</strong> Paciente</p>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand"><i class="bx bxs-smile icon"></i> AdminSite</a>
+      <ul class="side-menu">
+        <li>
+          <a href="#" class="active"
+            ><i class="bx bxs-dashboard icon"></i> Dashboard</a
+          >
+        </li>
+        <li class="divider" data-text="main">Main</li>
+        <li>
+          <a href="#"
+            ><i class="bx bxs-inbox icon"></i> Elements
+            <i class="bx bx-chevron-right icon-right"></i
+          ></a>
+          <ul class="side-dropdown">
+            <li><a href="#">Alert</a></li>
+            <li><a href="#">Badges</a></li>
+            <li><a href="#">Breadcrumbs</a></li>
+            <li><a href="#">Button</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#"><i class="bx bxs-chart icon"></i> Charts</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bxs-widget icon"></i> Widgets</a>
+        </li>
+        <li class="divider" data-text="table and forms">Table and forms</li>
+        <li>
+          <a href="#"><i class="bx bx-table icon"></i> Tables</a>
+        </li>
+        <li>
+          <a href="#"
+            ><i class="bx bxs-notepad icon"></i> Forms
+            <i class="bx bx-chevron-right icon-right"></i
+          ></a>
+          <ul class="side-dropdown">
+            <li><a href="#">Basic</a></li>
+            <li><a href="#">Select</a></li>
+            <li><a href="#">Checkbox</a></li>
+            <li><a href="#">Radio</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="ads">
+        <div class="wrapper">
+          <a href="#" class="btn-upgrade">Upgrade</a>
+          <p>
+            Become a <span>PRO</span> member and enjoy <span>All Features</span>
+          </p>
+        </div>
       </div>
+    </section>
+    <!-- SIDEBAR -->
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="#home">home</a></li>
-          <li><a href="#about">Datos Personales</a></li>
-          <li><a href="#service">service</a></li>
-          <li><a href="#eduscation">Reportes de Test</a></li>
-          <li><a href="#contact">Contactos</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- header section ends -->
-
-    <!-- content section starts  -->
-
-    <div class="container">
-      <section class="home" id="home">
-        <div class="image">
+    <!-- NAVBAR -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu toggle-sidebar"></i>
+        <form action="#">
+          <div class="form-group">
+            <input type="text" placeholder="Search..." />
+            <i class="bx bx-search icon"></i>
+          </div>
+        </form>
+        <a href="#" class="nav-link">
+          <i class="bx bxs-bell icon"></i>
+          <span class="badge">5</span>
+        </a>
+        <a href="#" class="nav-link">
+          <i class="bx bxs-message-square-dots icon"></i>
+          <span class="badge">8</span>
+        </a>
+        <span class="divider"></span>
+        <div class="profile">
           <img
-            style="width: 34em; right: -5em; position: relative"
-            src="../../../assets/img/Logo3PrName.png"
+            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
             alt=""
           />
+          <ul class="profile-link">
+            <li>
+              <a href="#"><i class="bx bxs-user-circle icon"></i> Profile</a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxs-cog"></i> Settings</a>
+            </li>
+            <li>
+              <a href="#"><i class="bx bxs-log-out-circle"></i> Logout</a>
+            </li>
+          </ul>
         </div>
-        <h3>Es muy bonito que estés de nuevo entre nosotros</h3>
-        <h3 class="name"><span>Bienvenido a HealthTest</span></h3>
-        <h3 class="post">
-          <span>Tipos de Tets: </span>
-          <span class="typing-text">front end developer</span>
-        </h3>
-        <br />
-        <div class="popup center">
-          <div class="image">
-            <img
-              style="width: 5em"
-              src="https://cdn-icons-png.flaticon.com/512/3403/3403541.png"
-            />
-          </div>
-          <div class="title">¡Empecemos!</div>
-          <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nihil
-            provident voluptatem nulla placeat
-          </div>
-          <div class="dismiss-btn">
-            <button id="dismiss-popup-btn">&times;</button>
-          </div>
-        </div>
-        <div class="button-borders">
-          <a href="#"
-            ><button class="primary-button" id="open-popup-btn">
-              Realizar Tests
-            </button></a
-          >
-        </div>
-      </section>
+      </nav>
+      <!-- NAVBAR -->
 
-      <!-- about section  -->
-
-      <section class="about" id="about">
-        <h1 class="heading">about me</h1>
-
-        <div class="content">
-          <h3 class="name">my name is <span>shaikh anas</span></h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quos
-            ipsam, temporibus veritatis sed dignissimos. Ratione consequuntur
-            sapiente reiciendis dolorem.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus,
-            iusto hic neque illo dolorem facere laborum quam inventore
-            architecto voluptates totam quo corrupti assumenda nihil voluptatum
-            optio ullam cupiditate excepturi?
-          </p>
-        </div>
-
-        <div class="skills">
-          <div class="progress">
-            <h3>html <span>95%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>css <span>85%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>javascript <span>65%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-          <div class="progress">
-            <h3>photoshop <span>70%</span></h3>
-            <div class="bar"><span></span></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- service section  -->
-      <section class="service" id="service">
-        <h1 class="heading">my services</h1>
-
-        <div class="box-container">
-          <div class="box">
-            <i class="fab fa-html5"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fab fa-css3"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fab fa-js"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fab fa-wordpress"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fas fa-paint-brush"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-
-          <div class="box">
-            <i class="fas fa-bullhorn"></i>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, sed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- education section  -->
-
-      <section class="education" id="education">
-        <h1 class="heading">my education</h1>
-
-        <div class="box-container">
-          <div class="box">
-            <div class="year">2017 - 2018</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="year">2018 - 2019</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="year">2019 - 2020</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-
-          <div class="box">
-            <div class="year">2020 - 2021</div>
-            <h3>front end development</h3>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
-              ut quis nam eos deserunt veritatis adipisci, beatae odio rerum
-              doloribus?
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- contact section  -->
-      <section class="contact" id="contact">
-        <h1 class="heading">contact me</h1>
-
-        <div class="row">
-          <form action="">
-            <input type="text" class="box" placeholder="first name" />
-            <input type="text" class="box" placeholder="last name" />
-            <input type="email" class="box" placeholder="your email" />
-            <input type="text" class="box" placeholder="your project" />
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              class="box message"
-              placeholder="message"
-            ></textarea>
-            <input type="submit" value="message" class="btn" />
-          </form>
-
-          <div class="content">
-            <div class="icons">
-              <h3><i class="fas fa-map-marker-alt"></i> address</h3>
-              <p>mumbai, india 400104</p>
+      <!-- MAIN -->
+      <main>
+        <h1 class="title">Dashboard</h1>
+        <ul class="breadcrumbs">
+          <li><a href="#">Home</a></li>
+          <li class="divider">/</li>
+          <li><a href="#" class="active">Dashboard</a></li>
+        </ul>
+        <div class="info-data">
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>1500</h2>
+                <p>Traffic</p>
+              </div>
+              <i class="bx bx-trending-up icon"></i>
             </div>
-            <div class="icons">
-              <h3><i class="fas fa-envelope"></i> email</h3>
-              <p>shaikh@gmail.com</p>
+            <span class="progress" data-value="40%"></span>
+            <span class="label">40%</span>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>234</h2>
+                <p>Sales</p>
+              </div>
+              <i class="bx bx-trending-down icon down"></i>
             </div>
-            <div class="icons">
-              <h3><i class="fas fa-phone"></i> phone</h3>
-              <p>+123-456-7890</p>
+            <span class="progress" data-value="60%"></span>
+            <span class="label">60%</span>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>465</h2>
+                <p>Pageviews</p>
+              </div>
+              <i class="bx bx-trending-up icon"></i>
+            </div>
+            <span class="progress" data-value="30%"></span>
+            <span class="label">30%</span>
+          </div>
+          <div class="card">
+            <div class="head">
+              <div>
+                <h2>235</h2>
+                <p>Visitors</p>
+              </div>
+              <i class="bx bx-trending-up icon"></i>
+            </div>
+            <span class="progress" data-value="80%"></span>
+            <span class="label">80%</span>
+          </div>
+        </div>
+        <div class="data">
+          <div class="content-data">
+            <div class="head">
+              <h3>Sales Report</h3>
+              <div class="menu">
+                <i class="bx bx-dots-horizontal-rounded icon"></i>
+                <ul class="menu-link">
+                  <li><a href="#">Edit</a></li>
+                  <li><a href="#">Save</a></li>
+                  <li><a href="#">Remove</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="chart">
+              <div id="chart"></div>
             </div>
           </div>
+          <div class="content-data">
+            <div class="head">
+              <h3>Chatbox</h3>
+              <div class="menu">
+                <i class="bx bx-dots-horizontal-rounded icon"></i>
+                <ul class="menu-link">
+                  <li><a href="#">Edit</a></li>
+                  <li><a href="#">Save</a></li>
+                  <li><a href="#">Remove</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="chat-box">
+              <p class="day"><span>Today</span></p>
+              <div class="msg">
+                <img
+                  src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                  alt=""
+                />
+                <div class="chat">
+                  <div class="profile">
+                    <span class="username">Alan</span>
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>Hello</p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Eaque voluptatum eos quam dolores eligendi exercitationem
+                    animi nobis reprehenderit laborum! Nulla.
+                  </p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ipsam, architecto!
+                  </p>
+                </div>
+              </div>
+              <div class="msg me">
+                <div class="chat">
+                  <div class="profile">
+                    <span class="time">18:30</span>
+                  </div>
+                  <p>Lorem ipsum, dolor sit amet.</p>
+                </div>
+              </div>
+            </div>
+            <form action="#">
+              <div class="form-group">
+                <input type="text" placeholder="Type..." />
+                <button type="submit" class="btn-send">
+                  <i class="bx bxs-send"></i>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
-      </section>
-    </div>
-
-    <!-- boton del wassap -->
-    <a
-      href="https://api.whatsapp.com/send/?phone=593984772266&text=Hola%2C+%C2%BFc%C3%B3mo+podemos+ayudarte%3F+Env%C3%ADanos+un+mensaje+&type=phone_number&app_absent=0"
-      class="btn-wsp"
-      target="_blank"
-    >
-      <i class="fa fa-whatsapp icono"></i>
-    </a>
-    <!-- Fin del boton del wassap -->
-    <!-- content section ends -->
-
-    <!-- theme toggler  -->
-
-    <div class="theme-toggler">
-      <span style="background: #063485"></span>
-      <span style="background: #ffa62b"></span>
-      <span style="background: #6d9e3f"></span>
-      <span style="background: rgb(255, 151, 112)"></span>
-      <span
-        style="
-          background: linear-gradient(
-            90deg,
-            rgba(6, 214, 160, 1) 0%,
-            rgba(255, 196, 61, 1) 49%,
-            rgba(252, 176, 69, 1) 70%
-          );
-        "
-      ></span>
-
-      <span style="background: linear-gradient(#999, #111)"></span>
-    </div>
-
-    <!-- type.js cdn link  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-
-    <script>
-      var type = new Typed(".typing-text", {
-        strings: [
-          "Tipos de Test",
-          "Test de Estrés",
-          "Test de Ansiedad",
-          "Test de Depresión",
-        ],
-        typeSpeed: 120,
-        loop: true,
-      });
-
-      let themeColor = document.querySelectorAll(".theme-toggler span");
-      themeColor.forEach((color) =>
-        color.addEventListener("click", () => {
-          let background = color.style.background;
-          document.querySelector("body").style.background = background;
-        })
-      );
-    </script>
-    <script>
-      (function (d) {
-        var s = d.createElement("script");
-        s.setAttribute("data-account", "OGRNOa8KSi");
-        s.setAttribute("src", "https://cdn.userway.org/widget.js");
-        (d.body || d.head).appendChild(s);
-      })(document);
-    </script>
-    <noscript
-      >Please ensure Javascript is enabled for purposes of
-      <a href="https://userway.org">website accessibility</a></noscript
-    >
-    <!--Popupscrip-->
-    <script src="../../../assets/Js/popup.js"></script>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- NAVBAR -->
   </body>
 </html>

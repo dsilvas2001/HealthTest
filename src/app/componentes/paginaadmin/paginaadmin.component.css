@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
-
 * {
   font-family: "Open Sans", sans-serif;
   margin: 0;
@@ -7,7 +5,7 @@
   box-sizing: border-box;
 }
 
-:root {
+.root {
   --grey: #f1f0f6;
   --dark-grey: #8d8d8d;
   --light: #fff;
@@ -25,7 +23,7 @@ html {
 }
 
 body {
-  background: var(--grey);
+  background: #f1f0f6;
   overflow-x: hidden;
 }
 
@@ -42,7 +40,7 @@ li {
   position: fixed;
   max-width: 260px;
   width: 100%;
-  background: var(--light);
+  background: #fff;
   top: 0;
   left: 0;
   height: 100%;
@@ -66,12 +64,12 @@ li {
   align-items: center;
   height: 64px;
   font-weight: 700;
-  color: var(--blue);
+  color: #ffa62b;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 100;
-  background: var(--light);
+  background: #fff;
   transition: all 0.3s ease;
   padding: 0 6px;
 }
@@ -101,7 +99,7 @@ li {
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: var(--dark);
+  color: #000;
   padding: 12px 16px 12px 0;
   transition: all 0.3s ease;
   border-radius: 10px;
@@ -109,22 +107,22 @@ li {
   white-space: nowrap;
 }
 #sidebar .side-menu > li > a:hover {
-  background: var(--grey);
+  background: #ffd166;
 }
 #sidebar .side-menu > li > a.active .icon-right {
   transform: rotateZ(90deg);
 }
 #sidebar .side-menu > li > a.active,
 #sidebar .side-menu > li > a.active:hover {
-  background: var(--blue);
-  color: var(--light);
+  background: #f7b267;
+  color: #fff;
 }
 #sidebar .divider {
   margin-top: 24px;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  color: var(--dark-grey);
+  color: #f1f0f6;
   transition: all 0.3s ease;
   white-space: nowrap;
 }
@@ -144,7 +142,7 @@ li {
   max-height: 1000px;
 }
 #sidebar .side-dropdown a:hover {
-  color: var(--blue);
+  color: #1775f1;
 }
 #sidebar .ads {
   width: 100%;
@@ -157,7 +155,7 @@ li {
   display: block;
 }
 #sidebar .ads .wrapper {
-  background: var(--grey);
+  background: #f1f0f6;
   padding: 20px;
   border-radius: 10px;
 }
@@ -167,19 +165,19 @@ li {
   justify-content: center;
   align-items: center;
   padding: 12px 0;
-  color: var(--light);
-  background: var(--blue);
+  color: #fff;
+  background: #1775f1;
   transition: all 0.3s ease;
   border-radius: 5px;
   font-weight: 600;
   margin-bottom: 12px;
 }
 #sidebar .btn-upgrade:hover {
-  background: var(--dark-blue);
+  background: #0c5fcd;
 }
 #sidebar .ads .wrapper p {
   font-size: 12px;
-  color: var(--dark-grey);
+  color: #f1f0f6;
   text-align: center;
 }
 #sidebar .ads .wrapper p span {
@@ -200,7 +198,7 @@ li {
 }
 /* NAVBAR */
 nav {
-  background: var(--light);
+  background: #fff;
   height: 64px;
   padding: 0 20px;
   display: flex;
@@ -225,7 +223,7 @@ nav .form-group {
 }
 nav .form-group input {
   width: 100%;
-  background: var(--grey);
+  background: #f1f0f6;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -233,21 +231,21 @@ nav .form-group input {
   transition: all 0.3s ease;
 }
 nav .form-group input:focus {
-  box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+  box-shadow: 0 0 0 1px #1775f1, 0 0 0 4px #d0e4ff;
 }
 nav .form-group .icon {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 16px;
-  color: var(--dark-grey);
+  color: #96bbbb;
 }
 nav .nav-link {
   position: relative;
 }
 nav .nav-link .icon {
   font-size: 18px;
-  color: var(--dark);
+  color: #000;
 }
 nav .nav-link .badge {
   position: absolute;
@@ -256,18 +254,18 @@ nav .nav-link .badge {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 2px solid var(--light);
-  background: var(--red);
+  border: 2px solid #fff;
+  background: #fc3b56;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--light);
+  color: #fff;
   font-size: 10px;
   font-weight: 700;
 }
 nav .divider {
   width: 1px;
-  background: var(--grey);
+  background: #000;
   height: 12px;
   display: block;
 }
@@ -285,7 +283,7 @@ nav .profile .profile-link {
   position: absolute;
   top: calc(100% + 10px);
   right: 0;
-  background: var(--light);
+  background: #fff;
   padding: 10px 0;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -304,12 +302,12 @@ nav .profile .profile-link a {
   display: flex;
   grid-gap: 10px;
   font-size: 14px;
-  color: var(--dark);
+  color: #000;
   align-items: center;
   transition: all 0.3s ease;
 }
 nav .profile .profile-link a:hover {
-  background: var(--grey);
+  background: #ffd166;
 }
 /* NAVBAR */
 
@@ -332,11 +330,11 @@ main .breadcrumbs li a {
   font-size: 14px;
 }
 main .breadcrumbs li a {
-  color: var(--blue);
+  color: #1775f1;
 }
 main .breadcrumbs li a.active,
 main .breadcrumbs li.divider {
-  color: var(--dark-grey);
+  color: #000;
   pointer-events: none;
 }
 main .info-data {
@@ -348,7 +346,7 @@ main .info-data {
 main .info-data .card {
   padding: 20px;
   border-radius: 10px;
-  background: var(--light);
+  background: #fff;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
 }
 main .card .head {
@@ -365,10 +363,10 @@ main .card .head p {
 }
 main .card .head .icon {
   font-size: 20px;
-  color: var(--green);
+  color: #81d43a;
 }
 main .card .head .icon.down {
-  color: var(--red);
+  color: #fc3b56;
 }
 main .card .progress {
   display: block;
@@ -376,7 +374,7 @@ main .card .progress {
   height: 10px;
   width: 100%;
   border-radius: 10px;
-  background: var(--grey);
+  background: #96bbbb;
   overflow-y: hidden;
   position: relative;
   margin-bottom: 4px;
@@ -387,7 +385,7 @@ main .card .progress::before {
   top: 0;
   left: 0;
   height: 100%;
-  background: var(--blue);
+  background: #1775f1;
   width: var(--value);
 }
 main .card .label {
@@ -404,8 +402,7 @@ main .data .content-data {
   flex-grow: 1;
   flex-basis: 400px;
   padding: 20px;
-  background: var(--light);
-  border-radius: 10px;
+  background: #fff;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
 }
 main .content-data .head {
@@ -432,7 +429,7 @@ main .content-data .head .menu-link {
   top: calc(100% + 10px);
   right: 0;
   width: 140px;
-  background: var(--light);
+  background: #fff;
   border-radius: 10px;
   box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.1);
   padding: 10px 0;
@@ -450,11 +447,11 @@ main .content-data .head .menu-link a {
   display: block;
   padding: 6px 16px;
   font-size: 14px;
-  color: var(--dark);
+  color: #000;
   transition: all 0.3s ease;
 }
 main .content-data .head .menu-link a:hover {
-  background: var(--grey);
+  background: #f1f0f6;
 }
 main .content-data .chart {
   width: 100%;
@@ -483,8 +480,8 @@ main .chat-box .day span {
   display: inline-block;
   padding: 6px 12px;
   border-radius: 20px;
-  background: var(--light-blue);
-  color: var(--blue);
+  background: #d0e4ff;
+  color: #1775f1;
   font-size: 12px;
   font-weight: 600;
 }
@@ -507,7 +504,7 @@ main .chat-box .profile .username {
 }
 main .chat-box .profile .time {
   font-size: 12px;
-  color: var(--dark-grey);
+  color: #8d8d8d;
 }
 main .chat-box .chat p {
   font-size: 14px;
@@ -518,7 +515,7 @@ main .chat-box .chat p {
 }
 main .chat-box .msg:not(.me) .chat p {
   border-radius: 0 5px 5px 5px;
-  background: var(--blue);
+  background: #1775f1;
   color: var(--light);
 }
 main .chat-box .msg.me {
@@ -528,7 +525,7 @@ main .chat-box .msg.me .profile {
   text-align: right;
 }
 main .chat-box .msg.me p {
-  background: var(--grey);
+  background: #96bbbb;
   border-radius: 5px 0 5px 5px;
 }
 main form {
@@ -544,25 +541,25 @@ main .form-group input {
   padding: 10px 16px;
   border-radius: 5px;
   outline: none;
-  background: var(--grey);
+  background: #96bbbb;
   border: none;
   transition: all 0.3s ease;
   width: 100%;
 }
 main .form-group input:focus {
-  box-shadow: 0 0 0 1px var(--blue), 0 0 0 4px var(--light-blue);
+  box-shadow: 0 0 0 1px #1775f1, 0 0 0 4px #d0e4ff;
 }
 main .btn-send {
   padding: 0 16px;
-  background: var(--blue);
+  background: #1775f1;
   border-radius: 5px;
-  color: var(--light);
+  color: #fff;
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
 }
 main .btn-send:hover {
-  background: var(--dark-blue);
+  background: #0c5fcd;
 }
 /* MAIN */
 /* CONTENT */

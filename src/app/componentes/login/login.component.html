@@ -13,10 +13,6 @@
     />
 
     <!-- ========== WebFont ========== -->
-    <script
-      src="https://kit.fontawesome.com/18096001b9.js"
-      crossorigin="anonymous"
-    ></script>
   </head>
 
   <body>
@@ -28,13 +24,13 @@
           <h2 class="title">Iniciar Sesión</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuario" />
+            <input type="text" required placeholder="Usuario" />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Contraseña" />
           </div>
-          <a href="/perfiluser" class="btn" style="font-size: 1.5em">
+          <a href="/paginaadmin" class="btn" style="font-size: 1.5em">
             <p
               style="
                 color: bisque;
@@ -64,13 +60,20 @@
           </div>
         </form>
 
-        <form action="" class="sign-up-form">
+        <!--Registrarse-->
+        <form
+          action=""
+          class="sign-up-form"
+          [formGroup]="FormularioAddUser"
+          (ngSubmit)="enviarDatosUser()"
+        >
           <br />
           <br />
           <h2 class="title" style="position: relative; top: 1em">
             Regístrarse
           </h2>
           <br />
+
           <div class="contenedor">
             <div
               class="selectbox"
@@ -86,7 +89,11 @@
               </div>
 
               <div class="opciones" id="opciones">
-                <a href="#" class="opcion">
+                <a
+                  href="#"
+                  class="opcion"
+                  (click)="setTipoUsuario('Administrador')"
+                >
                   <div class="contenido-opcion">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/2345/2345338.png"
@@ -98,7 +105,11 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="opcion">
+                <a
+                  href="#"
+                  class="opcion"
+                  (click)="setTipoUsuario('Psicologo')"
+                >
                   <div class="contenido-opcion">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/3475/3475916.png"
@@ -110,7 +121,7 @@
                     </div>
                   </div>
                 </a>
-                <a href="#" class="opcion">
+                <a href="#" class="opcion" (click)="setTipoUsuario('Paciente')">
                   <div class="contenido-opcion">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/4113/4113047.png"
@@ -128,19 +139,40 @@
 
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Nombre Completo" />
+            <input
+              type="text"
+              formControlName="nombre_completo"
+              placeholder="Nombre Completo"
+              [(ngModel)]="variablenombre_completo"
+            />
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Usuario" />
+            <input
+              type="text"
+              formControlName="usuario"
+              placeholder="Usuario"
+              [(ngModel)]="variableusuario"
+            />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="text" placeholder="Email" />
+            <input
+              type="text"
+              formControlName="email"
+              [(ngModel)]="variableemail"
+              placeholder="Email"
+            />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Contraseña" />
+            <input
+              type="password"
+              formControlName="contraseña"
+              placeholder="Contraseña"
+              [(ngModel)]="variablecontrasena"
+              required
+            />
           </div>
           <input type="submit" value="Regístrarse" class="btn" />
           <p class="social-text">O Iniciar Sesión con la Plataforma Social</p>

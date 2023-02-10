@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "healthtest-94078"
+  },
+  "targets": {
+    "healthtest-94078": {
+      "hosting": {
+        "healthtest": [
+          "healthtest-94078"
+        ]
+      }
+    }
+  }
+}
