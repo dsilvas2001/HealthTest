@@ -166,14 +166,14 @@ allProgress.forEach(item=> {
 // APEXCHART
 var options = {
   series: [{
-  name: 'Paciente',
+  name: 'Test de Estrés',
   data: [31, 40, 28, 51, 42, 109, 100]
 }, {
-	name: 'Psicólogo',
+	name: 'Test de Ansiedad',
 	data: [11, 32, 45, 32, 34, 52, 60]
   },
 {
-  name: 'Administrador',
+  name: 'Test de Depresión',
   data: [9, 27, 30, 25, 24, 22, 21]
 }],
 
@@ -201,16 +201,12 @@ tooltip: {
 
 var options1 = {
 	series: [{
-	name: 'Estres',
+	name: 'Pacientes No Registrados',
 	data: [31, 40, 28, 51, 42, 109, 100]
   }, {
-	  name: 'Ansiedad',
+	  name: 'Pacientes Registrados',
 	  data: [11, 32, 45, 32, 34, 52, 60]
-	},
-  {
-	name: 'Depresión',
-	data: [9, 27, 30, 25, 24, 22, 21]
-  }],
+	}],
   
 	chart: {
 	height: 350,
@@ -235,8 +231,8 @@ var options1 = {
 
 
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-var chart1 = new ApexCharts(document.querySelector("#chart1"), options1);
+var chart2 = new ApexCharts(document.querySelector("#chart2"), options);
+var chart3 = new ApexCharts(document.querySelector("#chart3"), options1);
 
-chart.render();
-chart1.render();
+chart2.render();
+chart3.render();

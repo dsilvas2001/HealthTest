@@ -1,18 +1,19 @@
 import { Component } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 
-
 @Component({
-  selector: 'app-perfiluser',
-  templateUrl: './perfiluser.component.html',
-  styleUrls: ['./perfiluser.component.css']
+  selector: 'app-contactanospaciente',
+  templateUrl: './contactanospaciente.component.html',
+  styleUrls: ['./contactanospaciente.component.css']
 })
-export class PerfiluserComponent {
-
+export class ContactanospacienteComponent {
   constructor(private _CargarScriptsuser: CargarScriptsService){
     _CargarScriptsuser.popuptest(["popup"]);
     _CargarScriptsuser.darkperfiluser(["darkperfiluser"]);
     _CargarScriptsuser.Webfont();
+    _CargarScriptsuser.Email();
+    _CargarScriptsuser.linkemail(["linkemail"]);
+    _CargarScriptsuser.Emailcontact(["scriptcontactanos"]);
 
     this.cargarestilo();
 
@@ -29,5 +30,4 @@ export class PerfiluserComponent {
     node.charset = 'utf-8';
     document.getElementsByTagName('head')[0].appendChild(node);
   }
-  
 }

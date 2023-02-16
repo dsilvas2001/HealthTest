@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 
 @Component({
-  selector: 'app-paginaadmin',
-  templateUrl: './paginaadmin.component.html',
-  styleUrls: ['./paginaadmin.component.css']
+  selector: 'app-estadisticatest',
+  templateUrl: './estadisticatest.component.html',
+  styleUrls: ['./estadisticatest.component.css']
 })
-export class PaginaadminComponent {
+export class EstadisticatestComponent {
   constructor(private _CargarScripts: CargarScriptsService){
-    _CargarScripts.Pagadmin(["scriptpagadmin"]);
+    _CargarScripts.Pagadminreportest(["scripreportestadmin"]);
+
     _CargarScripts.Webfont();
 
     this.scrippagprincipal();
@@ -35,5 +36,4 @@ scrippagprincipal() {
   node.charset = 'utf-8';
   document.getElementsByTagName('head')[0].appendChild(node);
 }
-
 }

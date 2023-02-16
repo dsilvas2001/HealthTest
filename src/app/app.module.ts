@@ -39,6 +39,16 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { PaginaadminComponent } from './componentes/paginaadmin/paginaadmin.component';
+import { EstadisticasuserComponent } from './componentes/estadisticasuser/estadisticasuser.component';
+import { MenuadminComponent } from './componentes/menuadmin/menuadmin.component';
+import { EstadisticatestComponent } from './componentes/estadisticatest/estadisticatest.component';
+import { ContactanosadminComponent } from './componentes/contactanosadmin/contactanosadmin.component';
+import { PerfiladminComponent } from './componentes/perfiladmin/perfiladmin.component';
+import { PaginapacienteComponent } from './componentes/paginapaciente/paginapaciente.component';
+import { ReportetestpacienteComponent } from './componentes/reportetestpaciente/reportetestpaciente.component';
+import { ContactanospacienteComponent } from './componentes/contactanospaciente/contactanospaciente.component';
+import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
+
 
 
 @NgModule({
@@ -67,7 +77,16 @@ import { PaginaadminComponent } from './componentes/paginaadmin/paginaadmin.comp
     QueesdepresionComponent,
     BlogsdepresionComponent,
     SintomasdepresionComponent,
-    PaginaadminComponent
+    PaginaadminComponent,
+    EstadisticasuserComponent,
+    MenuadminComponent,
+    EstadisticatestComponent,
+    ContactanosadminComponent,
+    PerfiladminComponent,
+    PaginapacienteComponent,
+    ReportetestpacienteComponent,
+    ContactanospacienteComponent,
+    LoginregisterComponent
   ],
   imports: [
     BrowserModule,
@@ -75,12 +94,9 @@ import { PaginaadminComponent } from './componentes/paginaadmin/paginaadmin.comp
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideFirestore(() => getFirestore())
+    
   ],
   providers: [
-    CargarScriptsService
   ],
   bootstrap: [AppComponent]
 })

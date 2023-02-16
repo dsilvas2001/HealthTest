@@ -20,7 +20,14 @@ import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepre
 import { SintomasdepresionComponent } from './componentes/sintomasdepresion/sintomasdepresion.component';
 import { BlogsdepresionComponent } from './componentes/blogsdepresion/blogsdepresion.component';
 import { PaginaadminComponent } from './componentes/paginaadmin/paginaadmin.component';
-
+import { EstadisticasuserComponent } from './componentes/estadisticasuser/estadisticasuser.component';
+import { EstadisticatestComponent } from './componentes/estadisticatest/estadisticatest.component';
+import { ContactanosadminComponent } from './componentes/contactanosadmin/contactanosadmin.component';
+import { PerfiladminComponent } from './componentes/perfiladmin/perfiladmin.component';
+import { PaginapacienteComponent } from './componentes/paginapaciente/paginapaciente.component';
+import { ReportetestpacienteComponent } from './componentes/reportetestpaciente/reportetestpaciente.component';
+import { ContactanospacienteComponent } from './componentes/contactanospaciente/contactanospaciente.component';
+import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
@@ -43,8 +50,18 @@ const routes: Routes = [
   {path: 'sintomasdepresion', component: SintomasdepresionComponent},
   {path: 'blogsdepresion', component: BlogsdepresionComponent},
   {path: 'paginaadmin', component: PaginaadminComponent},
+  {path: 'estadisticasuser', component: EstadisticasuserComponent},
+  {path: 'estadisticatest', component: EstadisticatestComponent},
+  {path: 'contactanosadmin', component: ContactanosadminComponent},
+  {path: 'perfiladmin', component: PerfiladminComponent},
+  {path: 'paginapaciente', component: PaginapacienteComponent},
+  {path: 'reportetestpaciente', component: ReportetestpacienteComponent},
+  {path: 'contactanospaciente', component: ContactanospacienteComponent},
+  {path: 'loginregister', component: LoginregisterComponent},
 
 
+
+  
 ];
 
 @NgModule({

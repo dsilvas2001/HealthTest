@@ -61,12 +61,7 @@
         </form>
 
         <!--Registrarse-->
-        <form
-          action=""
-          class="sign-up-form"
-          [formGroup]="FormularioAddUser"
-          (ngSubmit)="enviarDatosUser()"
-        >
+        <form action="" class="sign-up-form" (ngSubmit)="Guardar()">
           <br />
           <br />
           <h2 class="title" style="position: relative; top: 1em">
@@ -141,26 +136,26 @@
             <i class="fas fa-user"></i>
             <input
               type="text"
-              formControlName="nombre_completo"
               placeholder="Nombre Completo"
-              [(ngModel)]="variablenombre_completo"
+              name="nombre"
+              [(ngModel)]="persona.name"
             />
           </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input
               type="text"
-              formControlName="usuario"
               placeholder="Usuario"
-              [(ngModel)]="variableusuario"
+              name="username"
+              [(ngModel)]="persona.username"
             />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
             <input
               type="text"
-              formControlName="email"
-              [(ngModel)]="variableemail"
+              name="email"
+              [(ngModel)]="persona.email"
               placeholder="Email"
             />
           </div>
@@ -168,9 +163,9 @@
             <i class="fas fa-lock"></i>
             <input
               type="password"
-              formControlName="contraseña"
               placeholder="Contraseña"
-              [(ngModel)]="variablecontrasena"
+              name="password"
+              [(ngModel)]="persona.password"
               required
             />
           </div>

@@ -77,6 +77,26 @@ export class CargarScriptsService {
       document.getElementsByTagName('head')[0].appendChild(node);
     }
   }
+  Pagadminreportest(archivos: string[]) {
+    for (let archivo of archivos) {
+      let node = document.createElement('script');
+      node.src = "../../../assets/Js/scripreportestadmin.js";//Change to your js file
+      node.type = 'text/javascript';
+      node.async = true;
+      node.charset = 'utf-8';
+      document.getElementsByTagName('head')[0].appendChild(node);
+    }
+  }
+  darkperfiluser(archivos: string[]) {
+    for (let archivo of archivos) {
+      let node = document.createElement('script');
+      node.src = "../../../assets/Js/darkperfiluser.js";//Change to your js file
+      node.type = 'text/javascript';
+      node.async = true;
+      node.charset = 'utf-8';
+      document.getElementsByTagName('head')[0].appendChild(node);
+    }
+  }
 
   Videoprincipal(archivos: string[]) {
     for (let archivo of archivos) {

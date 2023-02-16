@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 
 @Component({
-  selector: 'app-paginaadmin',
-  templateUrl: './paginaadmin.component.html',
-  styleUrls: ['./paginaadmin.component.css']
+  selector: 'app-menuadmin',
+  templateUrl: './menuadmin.component.html',
+  styleUrls: ['./menuadmin.component.css']
 })
-export class PaginaadminComponent {
+export class MenuadminComponent {
   constructor(private _CargarScripts: CargarScriptsService){
     _CargarScripts.Pagadmin(["scriptpagadmin"]);
     _CargarScripts.Webfont();
@@ -35,5 +35,4 @@ scrippagprincipal() {
   node.charset = 'utf-8';
   document.getElementsByTagName('head')[0].appendChild(node);
 }
-
 }

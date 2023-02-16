@@ -1,92 +1,68 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import {
-  CollectionReference,
-  DocumentData,
-  collection,
-} from '@firebase/firestore';
-
-import { Firestore, collectionData, docData, addDoc } from '@angular/fire/firestore';
-import { Injectable } from '@angular/core';
-import { CrudService } from 'src/app/servicio/crud.service';
-import { Usuario } from 'src/app/servicio/Usuarios';
-
-import Swal from 'sweetalert2'
-
-
+import { Persona } from 'src/app/Modelo/Persona';
+import { Usuario } from 'src/app/Modelo/Usuario';
+import { Router } from '@angular/router';
+import swal from 'sweetalert2';
+import { ServiceService } from 'src/app/Services/service.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
-  
+export class LoginComponent implements OnInit {
   FormularioAddUser: FormGroup;
   tipoUsuario: string;
-  variablenombre_completo: string="";
-  variableusuario: string="";
-  variableemail: string="";
-  variablecontrasena: string="";
+  variablenombre_completo: string = '';
+  variableusuario: string = '';
+  variableemail: string = '';
+  variablecontrasena: string = '';
 
-  
+  model: any = {};
+  getData: boolean;
+  persona: Persona = new Persona();
+  usuario: Usuario = new Usuario();
+
   constructor(
     private _CargarScripts: CargarScriptsService,
     public formulario: FormBuilder,
-    private _userService: CrudService
+    private router: Router,
+    private service: ServiceService
   ) {
     _CargarScripts.carga(['scriplogin']);
     _CargarScripts.tipouser(['selectipouser']);
-    this.FormularioAddUser = this.formulario.group({
-      nombre_completo: [''],
-      usuario: [''],
-      email: [''],
-      contraseña: [''],
-      tipoUsuario: [''],
-    });
-    this.tipoUsuario = "";
+    this.tipoUsuario = '';
   }
 
   ngOnInit() {
     console.log('initializing');
   }
 
-  enviarDatosUser(): any {
-    let usuario: Usuario
-    usuario = {
-      usuario: this.variableusuario,
-      contrasena: this.variablecontrasena,
-      email: this.variableemail,
-      nombre_completo: this.variablenombre_completo,
-      tipuser: this.tipoUsuario
-    }
-    this._userService.createUsuario(usuario)
-    .then(result => {
-      this.confirmarregister ();
-    })
-    .catch(err => {
-      console.log('error', err);
-    })
-  }
-
   clickMe() {}
 
   setTipoUsuario(tipo: string) {
-    this.FormularioAddUser.get("tipoUsuario")?.setValue(tipo);
-    let tipoUser = this.FormularioAddUser.get("tipoUsuario")?.value;
-    console.log(tipoUser);
-    this.tipoUsuario = tipoUser;
-    console.log(this.FormularioAddUser.value);
+    
+    this.persona.tipousuario = tipo;
   }
 
+  Guardar() {
+    console.log('Objecto persona: ', this.persona);
 
-  confirmarregister (){
-    Swal.fire({
-    position: 'top-end',
-    icon: 'success',
-    title: 'Usuario Registrado',
-    showConfirmButton: false,
-    timer: 1500
-  })}
+    if (this.persona.tipousuario == '') {
+      alert('Fatla el tipo de usuario');
+      return;
+    }
+    this.service.createPersona(this.persona).subscribe({
+      next: (data) => {
+        alert('Se Agrego con Exito...!!!');
+        this.router.navigate(['login']);
+      },
+      error: (error) => {
+        alert('Error ');
+        console.log('Error: ', error);
+      },
+    });
+  }
 }
