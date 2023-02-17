@@ -13,11 +13,11 @@ export class ServiceService {
 
 
   Url = 'http://localhost:8080/api/v1/personas';
-  UrlLogin ='http://localhost:8080/user/';
+  Url2 = 'http://localhost:8080/api/v1/login';
 
   loginUser(persona: Persona):Observable<object>{
     console.log(persona)
-    return this.http.post(`${this.Url}`,persona);
+    return this.http.post(`${this.Url2}`,persona);
   }
   getPersonas():Observable<any>{
     return this.http.get<Persona[]>(this.Url);
