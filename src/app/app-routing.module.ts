@@ -28,6 +28,9 @@ import { PaginapacienteComponent } from './componentes/paginapaciente/paginapaci
 import { ReportetestpacienteComponent } from './componentes/reportetestpaciente/reportetestpaciente.component';
 import { ContactanospacienteComponent } from './componentes/contactanospaciente/contactanospaciente.component';
 import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
+import { PaginapsicologoComponent } from './componentes/paginapsicologo/paginapsicologo.component';
+
+
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
@@ -58,10 +61,7 @@ const routes: Routes = [
   {path: 'reportetestpaciente', component: ReportetestpacienteComponent},
   {path: 'contactanospaciente', component: ContactanospacienteComponent},
   {path: 'loginregister', component: LoginregisterComponent},
-
-
-
-  
+  {path: 'paginapsicologo', component: PaginapsicologoComponent},
 ];
 
 @NgModule({

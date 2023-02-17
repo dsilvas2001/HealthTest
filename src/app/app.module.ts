@@ -48,7 +48,7 @@ import { PaginapacienteComponent } from './componentes/paginapaciente/paginapaci
 import { ReportetestpacienteComponent } from './componentes/reportetestpaciente/reportetestpaciente.component';
 import { ContactanospacienteComponent } from './componentes/contactanospaciente/contactanospaciente.component';
 import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
-
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 
 @NgModule({
@@ -94,6 +94,7 @@ import { LoginregisterComponent } from './componentes/loginregister/loginregiste
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SweetAlert2Module.forRoot()
     
   ],
   providers: [
