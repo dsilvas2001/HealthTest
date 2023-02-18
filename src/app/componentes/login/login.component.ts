@@ -49,6 +49,10 @@ export class LoginComponent implements OnInit {
     this.persona.tipousuario = tipo;
   }
   userLogin(){
+    if (this.persona.tipousuario == '') {
+      this.espacioenblancostipouser();
+      return;
+    }
     if (this.persona.username == '') {
       this.espacioenblancosusuario();
       return;
@@ -59,8 +63,18 @@ export class LoginComponent implements OnInit {
     }
     console.log(this.persona)
     this.service.loginUser(this.persona).subscribe(data=>{
-      this.successfullLogin ()
-      this.router.navigate(["paginaadmin"]);
+      if (this.persona.tipousuario == 'Administrador') {
+        this.successfullLogin();
+        this.router.navigate(["paginaadmin"]);
+      }
+      if (this.persona.tipousuario == 'Psicologo') {
+        this.successfullLogin();
+        this.router.navigate(["paginapsicologo"]);
+      }
+      if (this.persona.tipousuario == 'Paciente') {
+        this.successfullLogin();
+        this.router.navigate(["paginapaciente"]);
+      }
     },error => this.errorLogin ())
   }
 

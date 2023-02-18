@@ -22,6 +22,68 @@
         <!--Iniciar sesion-->
         <form action="" class="sign-in-form" (ngSubmit)="userLogin()">
           <h2 class="title">Iniciar Sesión</h2>
+          <div class="contenedor">
+            <div
+              class="selectbox"
+              style="position: relative; top: -1em; right: 7em"
+            >
+              <div class="select" id="select" style="height: 0.1em">
+                <div class="contenido-select">
+                  <h1 class="titulo">
+                    Selecciona &nbsp; el &nbsp; tipo &nbsp;de&nbsp; usuario
+                  </h1>
+                </div>
+                <i class="fas fa-angle-down"></i>
+              </div>
+
+              <div class="opciones" id="opciones">
+                <a
+                  href="#"
+                  class="opcion"
+                  (click)="setTipoUsuario('Administrador')"
+                >
+                  <div class="contenido-opcion">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/2345/2345338.png"
+                      alt=""
+                    />
+                    <div class="textos">
+                      <h1 class="titulo">Administrador</h1>
+                      <p class="descripcion">Su cuenta sera verificada.</p>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="opcion"
+                  (click)="setTipoUsuario('Psicologo')"
+                >
+                  <div class="contenido-opcion">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3475/3475916.png"
+                      alt=""
+                    />
+                    <div class="textos">
+                      <h1 class="titulo">Psicologo</h1>
+                      <p class="descripcion">Su cuenta sera verificada.</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" class="opcion" (click)="setTipoUsuario('Paciente')">
+                  <div class="contenido-opcion">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/4113/4113047.png"
+                      alt=""
+                    />
+                    <div class="textos">
+                      <h1 class="titulo">Paciente</h1>
+                      <p class="descripcion">Su cuenta no sera verificada.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
           <div class="input-field">
             <i class="fas fa-user"></i>
             <input
