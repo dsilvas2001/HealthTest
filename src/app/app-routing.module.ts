@@ -29,7 +29,7 @@ import { ReportetestpacienteComponent } from './componentes/reportetestpaciente/
 import { ContactanospacienteComponent } from './componentes/contactanospaciente/contactanospaciente.component';
 import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
 import { PaginapsicologoComponent } from './componentes/paginapsicologo/paginapsicologo.component';
-
+import { PaginapsicologovisualizarpacienteComponent } from './componentes/paginapsicologovisualizarpaciente/paginapsicologovisualizarpaciente.component';
 
 
 const routes: Routes = [
@@ -62,6 +62,8 @@ const routes: Routes = [
   {path: 'contactanospaciente', component: ContactanospacienteComponent},
   {path: 'loginregister', component: LoginregisterComponent},
   {path: 'paginapsicologo', component: PaginapsicologoComponent},
+  {path: 'paginapsicologovisualizarpaciente', component: PaginapsicologovisualizarpacienteComponent},
+
 ];
 
 @NgModule({

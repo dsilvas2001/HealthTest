@@ -49,6 +49,9 @@ import { ReportetestpacienteComponent } from './componentes/reportetestpaciente/
 import { ContactanospacienteComponent } from './componentes/contactanospaciente/contactanospaciente.component';
 import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { PaginaclientesComponent } from './componentes/paginaclientes/paginaclientes.component';
+import { PaginapsicologovisualizarpacienteComponent } from './componentes/paginapsicologovisualizarpaciente/paginapsicologovisualizarpaciente.component';
+
 
 
 @NgModule({
@@ -86,7 +89,9 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     PaginapacienteComponent,
     ReportetestpacienteComponent,
     ContactanospacienteComponent,
-    LoginregisterComponent
+    LoginregisterComponent,
+    PaginaclientesComponent,
+    PaginapsicologovisualizarpacienteComponent
   ],
   imports: [
     BrowserModule,
