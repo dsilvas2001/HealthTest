@@ -1,0 +1,91 @@
+<!-- SIDEBAR -->
+<app-menuadmin></app-menuadmin>
+
+<!-- SIDEBAR -->
+
+<!-- NAVBAR -->
+<section id="content">
+  <!-- NAVBAR -->
+  <nav>
+    <i class="bx bx-menu toggle-sidebar"></i>
+    <form action="#">
+      <div class="form-group">
+        <input type="text" placeholder="Search..." />
+        <i class="bx bx-search icon"></i>
+      </div>
+    </form>
+    <a href="#" class="nav-link">
+      <i class="bx bxs-bell icon"></i>
+      <span class="badge">5</span>
+    </a>
+    <a href="#" class="nav-link">
+      <i class="bx bxs-message-square-dots icon"></i>
+      <span class="badge">8</span>
+    </a>
+    <span class="divider"></span>
+    <div class="profile">
+      <img
+        src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGVvcGxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        alt=""
+      />
+      <ul class="profile-link">
+        <li>
+          <a href="/perfiladmin"
+            ><i class="bx bxs-user-circle icon"></i>Editar Perfil</a
+          >
+        </li>
+        <li>
+          <a href="#"><i class="bx bxs-cog"></i> Settings</a>
+        </li>
+        <li>
+          <a href="#"><i class="bx bxs-log-out-circle"></i>Cerrar Sesión</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- NAVBAR -->
+
+  <!-- MAIN -->
+  <main>
+    <h1 class="title">HealthTest</h1>
+    <ul class="breadcrumbs">
+      <li><a href="#">Home</a></li>
+      <li class="divider">/</li>
+      <li><a href="#" class="active">HealthTest</a></li>
+    </ul>
+    <table class="table">
+      <thead>
+        <tr class="text-center">
+          <th scope="col">ID</th>
+          <th scope="col">NOMBRES</th>
+          <th scope="col">EMAIL</th>
+          <th scope="col">CONTRASEÑA</th>
+          <th scope="col">NOMBRE USUARIO</th>
+          <th scope="col">Aciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" style="justify-content: center">
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+
+          <td>
+            <button class="btn btn-warning">Editar</button>
+            <button
+              class="btn btn-danger"
+              style="justify-content: center; margin-left: 10px"
+            >
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <app-footer></app-footer>
+  </main>
+  <!-- MAIN -->
+</section>
+<!-- NAVBAR -->

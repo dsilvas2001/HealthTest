@@ -30,7 +30,7 @@ import { ContactanospacienteComponent } from './componentes/contactanospaciente/
 import { LoginregisterComponent } from './componentes/loginregister/loginregister.component';
 import { PaginapsicologoComponent } from './componentes/paginapsicologo/paginapsicologo.component';
 import { PaginapsicologovisualizarpacienteComponent } from './componentes/paginapsicologovisualizarpaciente/paginapsicologovisualizarpaciente.component';
-
+import { MostrarpacientesComponent } from './componentes/mostrarpacientes/mostrarpacientes.component';
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
@@ -63,6 +63,7 @@ const routes: Routes = [
   {path: 'loginregister', component: LoginregisterComponent},
   {path: 'paginapsicologo', component: PaginapsicologoComponent},
   {path: 'paginapsicologovisualizarpaciente', component: PaginapsicologovisualizarpacienteComponent},
+  {path: 'mostrarpacientes', component: MostrarpacientesComponent},
 
 ];
 
