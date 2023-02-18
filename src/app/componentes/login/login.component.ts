@@ -71,7 +71,7 @@ export class LoginComponent implements OnInit {
     }
     if (this.persona.tipousuario == 'Paciente') {
       this.successfullLogin();
-      this.router.navigate(["/paginapaciente"]);
+      this.router.navigate(["paginapaciente"]);
     }
     console.log(this.persona)
     /*this.service.loginUser(this.persona).subscribe(data=>{
