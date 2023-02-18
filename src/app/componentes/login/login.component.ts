@@ -63,18 +63,18 @@ export class LoginComponent implements OnInit {
     }
     if (this.persona.tipousuario == 'Administrador') {
       this.successfullLogin();
-      this.router.navigate(["paginaadmin"]);
+      this.router.navigate(["/paginaadmin"]);
     }
     if (this.persona.tipousuario == 'Psicologo') {
       this.successfullLogin();
-      this.router.navigate(["paginapsicologo"]);
+      this.router.navigate(["/paginapsicologo"]);
     }
     if (this.persona.tipousuario == 'Paciente') {
       this.successfullLogin();
-      this.router.navigate(["paginapaciente"]);
+      this.router.navigate(["/paginapaciente"]);
     }
     console.log(this.persona)
-    this.service.loginUser(this.persona).subscribe(data=>{
+    /*this.service.loginUser(this.persona).subscribe(data=>{
       if (this.persona.tipousuario == 'Administrador') {
         this.successfullLogin();
         this.router.navigate(["paginaadmin"]);
@@ -87,7 +87,7 @@ export class LoginComponent implements OnInit {
         this.successfullLogin();
         this.router.navigate(["paginapaciente"]);
       }
-    },error => this.errorLogin ())
+    },error => this.errorLogin ())*/
   }
 
   Guardar() {
