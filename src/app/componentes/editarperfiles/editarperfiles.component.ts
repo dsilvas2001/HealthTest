@@ -7,19 +7,13 @@ import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
 import Swal from 'sweetalert2'
 
-
-
-
 @Component({
-  selector: 'app-mostrarpacientes',
-  templateUrl: './mostrarpacientes.component.html',
-  styleUrls: ['./mostrarpacientes.component.css']
+  selector: 'app-editarperfiles',
+  templateUrl: './editarperfiles.component.html',
+  styleUrls: ['./editarperfiles.component.css']
 })
-export class MostrarpacientesComponent implements OnInit{
-  model: any = {};
-  getData: boolean;
-  personas: Persona[] = [];
-
+export class EditarperfilesComponent {
+  persona :Persona=new Persona();
 
   constructor(
     private _CargarScripts: CargarScriptsService,
@@ -34,49 +28,51 @@ export class MostrarpacientesComponent implements OnInit{
   }
 
   ngOnInit(){
-    console.log('initializing');
-
     this.cargarIcons();
-    this.service.getPersonas().subscribe((data) => {
+    this.Editar();
+}
+
+Editar(){
+  let id = localStorage.getItem("id");
+  if (id !== null && id !== undefined) {
+    this.service.getPersonaId(+id)
+    .subscribe(data=>{
       console.log('Objecto persona: ', data);
-      this.personas = data;
-    });
-
+      this.persona=data;
+    })
+  }
+ /* this.service.getPersonaId(+id)
+  .subscribe(data=>{
+    console.log('Objecto persona: ', data);
+    this.persona=data;
+  })*/
 }
 
-Editar(persona: Persona): void {
-  localStorage.setItem("id", persona.id.toString());
-  this.router.navigate(["editarperfiles"]);
-}
 
 
-Delete(persona: Persona) {
-  this.service.deletePersona(persona).subscribe((data) => {
-    this.personas = this.personas.filter((p) => p !== persona);
-    alert("Usuario eliminado...");
-  });
-}
-DeletePersona(persona:Persona) {
+
+ActualizarPersona(persona: Persona) {
   Swal.fire({
     title: '¿Estas seguro?',
-    text: "Confirma si deseas eliminar " + persona.email,
+    text: "Confirma si deseas Actualizar al  " + persona.tipousuario,
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
-    confirmButtonText: 'Si , Elimínalo'
+    confirmButtonText: 'Si , Actualizalo!'
   }).then((result) => {
     if (result.isConfirmed) {
-      this.service.deletePersona(persona).subscribe((dato) => {
-        this.personas = this.personas.filter((p) => p !== persona);
+      this.service.updatePersona(persona).subscribe((dato) => {
+        this.router.navigate(["mostrarpacientes"]);
         Swal.fire(
-          'Eliminado!',
-          'El Paciente ha sido eliminado.',
+          'Usuario Actualizado!',
+          'El Usuario ha sido Actualizado con exito',
           'success'
         )
       });
     }
   })
+
 }
 
 
@@ -100,9 +96,6 @@ scrippagprincipal() {
   node.charset = 'utf-8';
   document.getElementsByTagName('head')[0].appendChild(node);
 }
-
-
-
 
 
 }

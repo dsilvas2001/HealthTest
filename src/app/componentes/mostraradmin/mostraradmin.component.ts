@@ -5,17 +5,14 @@ import { Persona } from 'src/app/Modelo/Persona';
 import { Usuario } from 'src/app/Modelo/Usuario';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
-import Swal from 'sweetalert2'
-
-
-
 
 @Component({
-  selector: 'app-mostrarpacientes',
-  templateUrl: './mostrarpacientes.component.html',
-  styleUrls: ['./mostrarpacientes.component.css']
+  selector: 'app-mostraradmin',
+  templateUrl: './mostraradmin.component.html',
+  styleUrls: ['./mostraradmin.component.css']
 })
-export class MostrarpacientesComponent implements OnInit{
+export class MostraradminComponent {
+
   model: any = {};
   getData: boolean;
   personas: Persona[] = [];
@@ -37,52 +34,12 @@ export class MostrarpacientesComponent implements OnInit{
     console.log('initializing');
 
     this.cargarIcons();
-    this.service.getPersonas().subscribe((data) => {
+    this.service.getAdmin().subscribe((data) => {
       console.log('Objecto persona: ', data);
       this.personas = data;
     });
 
 }
-
-Editar(persona: Persona): void {
-  localStorage.setItem("id", persona.id.toString());
-  this.router.navigate(["editarperfiles"]);
-}
-
-
-Delete(persona: Persona) {
-  this.service.deletePersona(persona).subscribe((data) => {
-    this.personas = this.personas.filter((p) => p !== persona);
-    alert("Usuario eliminado...");
-  });
-}
-DeletePersona(persona:Persona) {
-  Swal.fire({
-    title: '¿Estas seguro?',
-    text: "Confirma si deseas eliminar " + persona.email,
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Si , Elimínalo'
-  }).then((result) => {
-    if (result.isConfirmed) {
-      this.service.deletePersona(persona).subscribe((dato) => {
-        this.personas = this.personas.filter((p) => p !== persona);
-        Swal.fire(
-          'Eliminado!',
-          'El Paciente ha sido eliminado.',
-          'success'
-        )
-      });
-    }
-  })
-}
-
-
-
-
-
 cargarIcons(){
   let node = document.createElement('link');
   node.href = "https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css ";//Change to your js file
@@ -100,9 +57,4 @@ scrippagprincipal() {
   node.charset = 'utf-8';
   document.getElementsByTagName('head')[0].appendChild(node);
 }
-
-
-
-
-
 }

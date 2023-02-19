@@ -52,19 +52,6 @@
       <li><a href="#">Home</a></li>
       <li class="divider">/</li>
       <li><a href="#" class="active">HealthTest</a></li>
-      <button
-        class="btn btn-info"
-        style="
-          margin-left: 10px;
-          position: relative;
-          right: -50em;
-          font-size: 1.5em;
-        "
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Agregar Paciente
-      </button>
     </ul>
     <div class="data">
       <div class="content-data">
@@ -90,14 +77,8 @@
               <td>{{ persona.tipousuario }}</td>
 
               <td>
-                <button (click)="Editar(persona)" class="btn btn-warning">
-                  Editar
-                </button>
-                <button
-                  (click)="DeletePersona(persona)"
-                  class="btn btn-danger"
-                  style="margin-left: 10px"
-                >
+                <button class="btn btn-warning">Editar</button>
+                <button class="btn btn-danger" style="margin-left: 10px">
                   Eliminar
                 </button>
               </td>
@@ -107,73 +88,7 @@
       </div>
     </div>
   </main>
-
   <!-- MAIN -->
   <app-footer></app-footer>
 </section>
 <!-- NAVBAR -->
-
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
-  style="position: relative; top: -45em"
->
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="heading"><span>Contacta Con</span> Nosotros</h1>
-      </div>
-      <div class="modal-body">
-        <section class="book" id="book">
-          <div class="row">
-            <form id="form">
-              <input
-                type="text"
-                name="from_name"
-                id="from_name"
-                placeholder="Nombre Completo"
-                class="box"
-                required
-              />
-              <input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="Numero de Telefono"
-                class="box"
-                required
-              />
-              <input
-                type="email"
-                name="email_id"
-                id="email_id"
-                placeholder="Email"
-                class="box"
-                required
-              />
-              <textarea
-                class="box"
-                name="message"
-                name="message"
-                id="message"
-                cols="30"
-                rows="5"
-                placeholder="Ingresa Tu Mensaje"
-              ></textarea>
-            </form>
-          </div>
-        </section>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
-        </button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>

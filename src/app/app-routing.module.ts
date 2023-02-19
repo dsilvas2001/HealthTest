@@ -31,6 +31,10 @@ import { LoginregisterComponent } from './componentes/loginregister/loginregiste
 import { PaginapsicologoComponent } from './componentes/paginapsicologo/paginapsicologo.component';
 import { PaginapsicologovisualizarpacienteComponent } from './componentes/paginapsicologovisualizarpaciente/paginapsicologovisualizarpaciente.component';
 import { MostrarpacientesComponent } from './componentes/mostrarpacientes/mostrarpacientes.component';
+import { MostrarpsicologoComponent } from './componentes/mostrarpsicologo/mostrarpsicologo.component'; 
+import { MostraradminComponent } from './componentes/mostraradmin/mostraradmin.component';
+import { EditarperfilesComponent } from './componentes/editarperfiles/editarperfiles.component';
+
 
 const routes: Routes = [
   {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
@@ -64,7 +68,9 @@ const routes: Routes = [
   {path: 'paginapsicologo', component: PaginapsicologoComponent},
   {path: 'paginapsicologovisualizarpaciente', component: PaginapsicologovisualizarpacienteComponent},
   {path: 'mostrarpacientes', component: MostrarpacientesComponent},
-
+  {path: 'mostrarpsicologo', component: MostrarpsicologoComponent},
+  {path: 'mostraradmin', component: MostraradminComponent},
+  {path: 'editarperfiles', component: EditarperfilesComponent},
 ];
 
 @NgModule({

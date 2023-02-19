@@ -14,6 +14,8 @@ export class ServiceService {
 
   Url = 'http://localhost:8080/api/v1/personas';
   Url2 = 'http://localhost:8080/api/v1/login';
+  Url3= 'http://localhost:8080/api//v1/psicologo';
+  Url4= 'http://localhost:8080/api//v1/admin';
 
   loginUser(persona: Persona):Observable<object>{
     console.log(persona)
@@ -22,12 +24,26 @@ export class ServiceService {
   getPersonas():Observable<any>{
     return this.http.get<Persona[]>(this.Url);
   }
+  
+  getPsicologo():Observable<any>{
+    return this.http.get<Persona[]>(this.Url3);
+  }
+
+  getAdmin():Observable<any>{
+    return this.http.get<Persona[]>(this.Url4);
+  }
+
   createPersona(persona: Persona): Observable<any>{
     return this.http.post<Persona>(this.Url, persona);
   }
+  
+
   getPersonaId(id:number):Observable<any>{
     return this.http.get<Persona>(this.Url+"/"+id);
   }
+
+
+
   updatePersona(persona:Persona):Observable<any>{
     return this.http.put<Persona>(this.Url+"/"+persona.id,persona);
   }

@@ -1,5 +1,8 @@
 export class Persona {
-  id?: String;
+  id:String;
+  
+
+  
   nombre?: String;
   apellido?: String;
   email?: String;
