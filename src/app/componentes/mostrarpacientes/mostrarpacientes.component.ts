@@ -19,6 +19,7 @@ export class MostrarpacientesComponent implements OnInit{
   model: any = {};
   getData: boolean;
   personas: Persona[] = [];
+  persona: Persona = new Persona();
 
 
   constructor(
@@ -79,9 +80,105 @@ DeletePersona(persona:Persona) {
   })
 }
 
+Guardar() {
+  console.log('Objecto persona: ', this.persona);
 
+  
+  if (this.persona.name == '') {
+    this.espacioenblancosnombre();
+    return;
+  }
+  if (this.persona.username == '') {
+    this.espacioenblancosusuario();
+    return;
+  }
+  if (this.persona.password == '') {
+    this.espacioenblancoscontraseña();
+    return;
+  }
+  if (this.persona.email == '') {
+    this.espacioenblancosemail();
+    return;
+  }
+  this.service.createPersona(this.persona).subscribe({
+    next: (data) => {
+      this.confirmarregister ();
+      this.router.navigate(['/mostrarpacientes']);
+    },
+    error: (error) => {
+      this.errorregister ();
+      console.log('Error: ', error);
+    },
+  });
 
+}
+setTipoUsuario(tipo: string) {
+    
+  this.persona.tipousuario = tipo;
+}
 
+confirmarregister (){
+  Swal.fire({
+  position: 'top-end',
+  icon: 'success',
+  title: 'Usuario Registrado',
+  showConfirmButton: false,
+  timer: 1500
+})}
+espacioenblancostipouser(){
+  Swal.fire({
+    title: '¿Está seguro?',
+    text: "Falta de ingresar el tipo de usuario!",
+    icon: 'warning',
+    confirmButtonColor: '#3085d6',
+    confirmButtonText: 'Entendido!'
+  })
+}
+espacioenblancosnombre(){
+  Swal.fire({
+    title: '¿Está seguro?',
+    text: "Ingrese el nombre completo!",
+    icon: 'warning',
+    confirmButtonColor: '#3085d6',
+    confirmButtonText: 'Entendido!'
+  })
+}
+espacioenblancosusuario(){
+  Swal.fire({
+    title: '¿Está seguro?',
+    text: "Ingrese el usuario!",
+    icon: 'warning',
+    confirmButtonColor: '#3085d6',
+    confirmButtonText: 'Entendido!'
+  })
+}
+espacioenblancoscontraseña(){
+  Swal.fire({
+    title: '¿Está seguro?',
+    text: "Ingrese la contraseña!",
+    icon: 'warning',
+    confirmButtonColor: '#3085d6',
+    confirmButtonText: 'Entendido!'
+  })
+}
+espacioenblancosemail(){
+  Swal.fire({
+    title: '¿Está seguro?',
+    text: "Ingrese su correo electronico!",
+    icon: 'warning',
+    confirmButtonColor: '#3085d6',
+    confirmButtonText: 'Entendido!'
+  })
+}
+
+errorregister (){
+  Swal.fire({
+  position: 'top-end',
+  icon: 'error',
+  title: 'Sus datos no se ingresaron correctamente',
+  showConfirmButton: false,
+  timer: 1500
+})}
 
 cargarIcons(){
   let node = document.createElement('link');

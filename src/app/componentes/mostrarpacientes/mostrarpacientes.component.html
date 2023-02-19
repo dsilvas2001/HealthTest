@@ -52,6 +52,8 @@
       <li><a href="#">Home</a></li>
       <li class="divider">/</li>
       <li><a href="#" class="active">HealthTest</a></li>
+    </ul>
+    <div class="data">
       <button
         class="btn btn-info"
         style="
@@ -65,7 +67,33 @@
       >
         Agregar Paciente
       </button>
-    </ul>
+      <a
+        disabled=""
+        type="button"
+        class="cargarbuttom"
+        style="font-size: 2em"
+        href="/mostrarpacientes"
+      >
+        <svg
+          aria-hidden="true"
+          role="status"
+          class="inline w-4 h-4 mr-3 text-white animate-spin"
+          viewBox="0 0 100 101"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+            fill="#E5E7EB"
+          ></path>
+          <path
+            d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+            fill="currentColor"
+          ></path>
+        </svg>
+        Actualizar Tabla...
+      </a>
+    </div>
     <div class="data">
       <div class="content-data">
         <table class="table" style="font-size: 1em">
@@ -120,59 +148,96 @@
   role="dialog"
   aria-labelledby="exampleModalLabel"
   aria-hidden="true"
-  style="position: relative; top: -45em"
 >
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="heading"><span>Contacta Con</span> Nosotros</h1>
+        <h6 class="heading"><span>Agregar</span> PACIENTE</h6>
       </div>
       <div class="modal-body">
         <section class="book" id="book">
           <div class="row">
-            <form id="form">
+            <form action="" id="form" (ngSubmit)="Guardar()">
               <input
                 type="text"
-                name="from_name"
-                id="from_name"
+                name="nombre"
+                [(ngModel)]="persona.name"
                 placeholder="Nombre Completo"
                 class="box"
                 required
               />
+
               <input
-                type="number"
-                name="phone"
-                id="phone"
-                placeholder="Numero de Telefono"
+                type="text"
+                name="username"
+                [(ngModel)]="persona.username"
+                placeholder="Usuario"
                 class="box"
                 required
               />
               <input
+                type="text"
+                name="password"
+                [(ngModel)]="persona.password"
+                placeholder="Contraseña"
+                class="box"
+                required
+              />
+              <input
+                type="text"
+                name="tipousuario"
+                [disabled]="true"
+                class="box"
+                required
+                placeholder="Paciente"
+              />
+              <input
                 type="email"
-                name="email_id"
-                id="email_id"
+                name="email"
+                [(ngModel)]="persona.email"
                 placeholder="Email"
                 class="box"
                 required
               />
-              <textarea
-                class="box"
-                name="message"
-                name="message"
-                id="message"
-                cols="30"
-                rows="5"
-                placeholder="Ingresa Tu Mensaje"
-              ></textarea>
+
+              <button
+                class="cssbuttons-io-button"
+                (click)="setTipoUsuario('Paciente')"
+                type="submit"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="24"
+                  height="24"
+                >
+                  <path fill="none" d="M0 0h24v24H0z"></path>
+                  <path
+                    fill="currentColor"
+                    d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"
+                  ></path>
+                </svg>
+                <span>Añadir Paciente</span>
+              </button>
             </form>
           </div>
         </section>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
-          Close
+        <button data-bs-dismiss="modal" class="noselect">
+          <span class="text" style="font-size: 1.5em">Volver</span
+          ><span class="icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+              ></path></svg
+          ></span>
         </button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>
