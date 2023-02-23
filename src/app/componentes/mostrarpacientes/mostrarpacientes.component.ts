@@ -38,16 +38,27 @@ export class MostrarpacientesComponent implements OnInit{
     console.log('initializing');
 
     this.cargarIcons();
-    this.service.getPersonas().subscribe((data) => {
-      console.log('Objecto persona: ', data);
-      this.personas = data;
-    });
+    this.listarpaciente();
 
 }
 
+listarpaciente(){
+  this.service.getPersonas().subscribe((data) => {
+    console.log('Objecto persona: ', data);
+    this.personas = data;
+  });
+}
+ExportarPDF() {
+  this.service.getPDF().subscribe((data) => {
+    console.log('Objecto PDF: ', data);
+    this.personas = data;
+  });
+}
+
+
 Editar(persona: Persona): void {
   localStorage.setItem("id", persona.id.toString());
-  this.router.navigate(["editarperfiles"]);
+  this.router.navigate(["editarperfilpaciente"]);
 }
 
 
@@ -103,7 +114,8 @@ Guardar() {
   this.service.createPersona(this.persona).subscribe({
     next: (data) => {
       this.confirmarregister ();
-      this.router.navigate(['/mostrarpacientes']);
+      this.listarpaciente();
+      
     },
     error: (error) => {
       this.errorregister ();

@@ -56,6 +56,8 @@ import { MostrarpsicologoComponent } from './componentes/mostrarpsicologo/mostra
 import { MostraradminComponent } from './componentes/mostraradmin/mostraradmin.component';
 import { PerfisueserComponent } from './componentes/perfisueser/perfisueser.component';
 import { EditarperfilesComponent } from './componentes/editarperfiles/editarperfiles.component';
+import { EditarperfilpacienteComponent } from './componentes/editarperfilpaciente/editarperfilpaciente.component';
+import { EditarpacienteperfilComponent } from './componentes/editarpacienteperfil/editarpacienteperfil.component';
 
 
 
@@ -101,7 +103,9 @@ import { EditarperfilesComponent } from './componentes/editarperfiles/editarperf
     MostrarpsicologoComponent,
     MostraradminComponent,
     PerfisueserComponent,
-    EditarperfilesComponent
+    EditarperfilesComponent,
+    EditarperfilpacienteComponent,
+    EditarpacienteperfilComponent
   ],
   imports: [
     BrowserModule,

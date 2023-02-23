@@ -5,6 +5,7 @@ import { Persona } from 'src/app/Modelo/Persona';
 import { Usuario } from 'src/app/Modelo/Usuario';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-mostraradmin',
@@ -16,6 +17,7 @@ export class MostraradminComponent {
   model: any = {};
   getData: boolean;
   personas: Persona[] = [];
+  persona :Persona=new Persona();
 
 
   constructor(
@@ -38,8 +40,34 @@ export class MostraradminComponent {
       console.log('Objecto persona: ', data);
       this.personas = data;
     });
+   
 
 }
+
+
+
+Editar(persona: Persona): void {
+  localStorage.setItem("id", persona.id.toString());
+  this.Editarvisualizar();
+}
+
+Editarvisualizar(){
+  let id = localStorage.getItem("id");
+  if (id !== null && id !== undefined) {
+    this.service.getPersonaId(+id)
+    .subscribe(data=>{
+      console.log('Objecto persona: ', data);
+      this.persona=data;
+    })
+  }
+ /* this.service.getPersonaId(+id)
+  .subscribe(data=>{
+    console.log('Objecto persona: ', data);
+    this.persona=data;
+  })*/
+}
+
+
 cargarIcons(){
   let node = document.createElement('link');
   node.href = "https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css ";//Change to your js file

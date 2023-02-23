@@ -49,10 +49,81 @@
   <main>
     <h1 class="title">HealthTest</h1>
     <ul class="breadcrumbs">
-      <li><a href="#">Home</a></li>
+      <li><a href="#">Mostrar Administrador</a></li>
       <li class="divider">/</li>
       <li><a href="#" class="active">HealthTest</a></li>
     </ul>
+
+    <a
+      disabled=""
+      type="button"
+      class="cargarbuttom"
+      style="font-size: 2em"
+      href="/mostraradmin"
+    >
+      <svg
+        aria-hidden="true"
+        role="status"
+        class="inline w-4 h-4 mr-3 text-white animate-spin"
+        viewBox="0 0 100 101"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+          fill="#E5E7EB"
+        ></path>
+        <path
+          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+          fill="currentColor"
+        ></path>
+      </svg>
+      Actualizar Tabla...
+    </a>
+
+    <a href="http://localhost:8080/api/v1/exportaradminPDF">
+      <button class="download-button">
+        <div class="docs">
+          <svg
+            class="css-i6dzq1"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            fill="none"
+            stroke-width="2"
+            stroke="currentColor"
+            height="20"
+            width="20"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+            ></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line y2="13" x2="8" y1="13" x1="16"></line>
+            <line y2="17" x2="8" y1="17" x1="16"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          ReportePDF
+        </div>
+        <div class="download">
+          <svg
+            class="css-i6dzq1"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            fill="none"
+            stroke-width="2"
+            stroke="currentColor"
+            height="24"
+            width="24"
+            viewBox="0 0 24 24"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line y2="3" x2="12" y1="15" x1="12"></line>
+          </svg>
+        </div>
+      </button>
+    </a>
     <div class="data">
       <div class="content-data">
         <table class="table" style="font-size: 1em">
@@ -77,9 +148,13 @@
               <td>{{ persona.tipousuario }}</td>
 
               <td>
-                <button class="btn btn-warning">Editar</button>
-                <button class="btn btn-danger" style="margin-left: 10px">
-                  Eliminar
+                <button
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  class="btn btn-warning"
+                  (click)="Editar(persona)"
+                >
+                  Visualizar Info
                 </button>
               </td>
             </tr>
@@ -92,3 +167,112 @@
   <app-footer></app-footer>
 </section>
 <!-- NAVBAR -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="heading"><span>Visualizar</span> Administrador</h6>
+        <button data-bs-dismiss="modal" class="noselect">
+          <span class="text" style="font-size: 1.5em">Volver</span
+          ><span class="icon"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"
+              ></path></svg
+          ></span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <section class="book" id="book">
+          <div class="row">
+            <form id="form">
+              <label style="font-size: 1.5em; position: relative; right: 14em"
+                >Id</label
+              >
+              <input
+                type="text"
+                name="id"
+                [disabled]="true"
+                [(ngModel)]="persona.id"
+                class="box"
+                required
+              />
+              <label style="font-size: 1.5em; position: relative; right: 11em"
+                >Nombre Completo</label
+              >
+              <input
+                [disabled]="true"
+                type="text"
+                name="name"
+                [(ngModel)]="persona.name"
+                placeholder="Nombre Completo"
+                class="box"
+                required
+              />
+              <label style="font-size: 1.5em; position: relative; right: 13em"
+                >Usuario</label
+              >
+              <input
+                [disabled]="true"
+                type="text"
+                [(ngModel)]="persona.username"
+                name="username"
+                placeholder="Usuario"
+                class="box"
+                required
+              />
+              <label style="font-size: 1.5em; position: relative; right: 12.4em"
+                >Contraseña</label
+              >
+              <input
+                [disabled]="true"
+                type="text"
+                [(ngModel)]="persona.password"
+                name="password"
+                placeholder="Contraseña"
+                class="box"
+                required
+              />
+              <label style="font-size: 1.5em; position: relative; right: 11.4em"
+                >Tipo de Usuario</label
+              >
+              <input
+                type="text"
+                name="tipousuario"
+                [disabled]="true"
+                [(ngModel)]="persona.tipousuario"
+                placeholder="Tipo de Usuario"
+                class="box"
+                required
+              />
+              <label style="font-size: 1.5em; position: relative; right: 11em"
+                >Correo Electrónico</label
+              >
+              <input
+                [disabled]="true"
+                type="email"
+                [(ngModel)]="persona.email"
+                name="email"
+                placeholder="Email"
+                class="box"
+                required
+              />
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

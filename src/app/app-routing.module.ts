@@ -34,6 +34,8 @@ import { MostrarpacientesComponent } from './componentes/mostrarpacientes/mostra
 import { MostrarpsicologoComponent } from './componentes/mostrarpsicologo/mostrarpsicologo.component'; 
 import { MostraradminComponent } from './componentes/mostraradmin/mostraradmin.component';
 import { EditarperfilesComponent } from './componentes/editarperfiles/editarperfiles.component';
+import { EditarperfilpacienteComponent } from './componentes/editarperfilpaciente/editarperfilpaciente.component';
+import { EditarpacienteperfilComponent } from './componentes/editarpacienteperfil/editarpacienteperfil.component';
 
 
 const routes: Routes = [
@@ -71,6 +73,10 @@ const routes: Routes = [
   {path: 'mostrarpsicologo', component: MostrarpsicologoComponent},
   {path: 'mostraradmin', component: MostraradminComponent},
   {path: 'editarperfiles', component: EditarperfilesComponent},
+  {path: 'editarperfilpaciente', component: EditarperfilpacienteComponent},
+  {path: 'editarpacienteperfil', component: EditarpacienteperfilComponent},
+
+
 ];
 
 @NgModule({

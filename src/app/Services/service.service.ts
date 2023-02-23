@@ -16,6 +16,28 @@ export class ServiceService {
   Url2 = 'http://localhost:8080/api/v1/login';
   Url3= 'http://localhost:8080/api//v1/psicologo';
   Url4= 'http://localhost:8080/api//v1/admin';
+  Url5= 'http://localhost:8080/api/v1/exportarPDF';
+  Urltotalpaciente= 'http://localhost:8080/api/v1/contadortotalpaciente';
+
+  Urltotalpsicologo= 'http://localhost:8080/api/v1/contadortotalpsicolo';
+
+  Urltotaladmin= 'http://localhost:8080/api/v1/contadortotaladmin';
+
+
+
+  getPDF():Observable<any>{
+    return this.http.get<Persona[]>(this.Url5);
+  }
+
+  gettotalpaciente():Observable<any>{
+    return this.http.get<Persona>(this.Urltotalpaciente);
+  }
+  gettotalpsicologo():Observable<any>{
+    return this.http.get<Persona>(this.Urltotalpsicologo);
+  }
+  gettotaladmin():Observable<any>{
+    return this.http.get<Persona>(this.Urltotaladmin);
+  }
 
   loginUser(persona: Persona):Observable<object>{
     console.log(persona)

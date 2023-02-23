@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { Persona } from 'src/app/Modelo/Persona';
@@ -8,15 +8,12 @@ import { ServiceService } from 'src/app/Services/service.service';
 import Swal from 'sweetalert2'
 
 
-
-
-
 @Component({
-  selector: 'app-editarperfiles',
-  templateUrl: './editarperfiles.component.html',
-  styleUrls: ['./editarperfiles.component.css']
+  selector: 'app-editarpacienteperfil',
+  templateUrl: './editarpacienteperfil.component.html',
+  styleUrls: ['./editarpacienteperfil.component.css']
 })
-export class EditarperfilesComponent {
+export class EditarpacienteperfilComponent {
   persona :Persona=new Persona();
 
   constructor(
@@ -68,7 +65,6 @@ ActualizarPersona(persona: Persona) {
     if (result.isConfirmed) {
       if (persona.tipousuario == 'Paciente' ) {
         this.service.updatePersona(persona).subscribe((dato) => {
-          this.router.navigate(["mostrarpacientes"]);
           Swal.fire(
             'Usuario Actualizado!',
             'El Usuario ha sido Actualizado con exito',
@@ -76,19 +72,6 @@ ActualizarPersona(persona: Persona) {
           )
         });
       }
-
-      if (persona.tipousuario == 'Psicologo' ) {
-        this.service.updatePersona(persona).subscribe((dato) => {
-          
-
-          Swal.fire(
-            'Usuario Actualizado!',
-            'El Usuario ha sido Actualizado con exito',
-            'success'
-          )
-        });
-      }
-     
     }
   })
 
@@ -96,8 +79,7 @@ ActualizarPersona(persona: Persona) {
 
 
 
-
-
+  
 cargarIcons(){
   let node = document.createElement('link');
   node.href = "https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css ";//Change to your js file
@@ -115,6 +97,4 @@ scrippagprincipal() {
   node.charset = 'utf-8';
   document.getElementsByTagName('head')[0].appendChild(node);
 }
-
-
 }

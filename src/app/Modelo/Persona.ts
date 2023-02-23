@@ -11,6 +11,9 @@ export class Persona {
   password?: String;
   tipousuario?: String;
 
+  contadorusuario: String;
+
+
   constructor() {
     this.id = "";
     this.nombre = "";
@@ -20,5 +23,7 @@ export class Persona {
     this.username = "";
     this.password = "";
     this.tipousuario = "";
+    this.contadorusuario = "";
+
   }
 }
