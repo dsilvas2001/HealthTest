@@ -8,9 +8,6 @@ import { ServiceService } from 'src/app/Services/service.service';
 import Swal from 'sweetalert2'
 
 
-
-
-
 @Component({
   selector: 'app-editarperfiles',
   templateUrl: './editarperfiles.component.html',

@@ -10,7 +10,7 @@
   <div class="menu-items">
     <ul class="nav-links">
       <li>
-        <a href="/paginapaciente">
+        <a href="/paciente/paginapaciente">
           <i class="uil uil-estate"></i>
           <span class="link-name">Home</span>
         </a>
@@ -22,13 +22,13 @@
         </a>
       </li>
       <li>
-        <a href="/reportetestpaciente">
+        <a href="/paciente/reportetestpaciente">
           <i class="uil uil-chart"></i>
           <span class="link-name">Reporte de Test</span>
         </a>
       </li>
       <li>
-        <a href="/contactanospaciente">
+        <a href="/paciente/contactanospaciente">
           <i class="uil uil-comments"></i>
           <span class="link-name">Contactanos</span>
         </a>
@@ -37,10 +37,10 @@
 
     <ul class="logout-mode">
       <li>
-        <a href="#">
+        <button class="cerrasesion" type="submit" (click)="cerrarSesion()">
           <i class="uil uil-signout"></i>
           <span class="link-name">Cerrar Sesión </span>
-        </a>
+        </button>
       </li>
     </ul>
   </div>
@@ -105,7 +105,12 @@
             <span class="shadow"></span>
             <span class="edge"></span>
             <span class="front text">
-              <input type="submit" class="front" id="button" value="Enviar" />
+              <input
+                style="border-color: transparent"
+                type="submit"
+                class="front"
+                id="button"
+                value="Enviar" />
               <i class="fa-solid fa-message"></i
             ></span>
           </button>

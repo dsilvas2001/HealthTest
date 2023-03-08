@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Persona } from '../Modelo/Persona';
+import { UserService } from './user.service'
 
 
 @Injectable({
@@ -9,13 +10,16 @@ import { Persona } from '../Modelo/Persona';
 })
 export class ServiceService {
 
-  constructor(private http:HttpClient) { }
+  constructor(
+    private http:HttpClient,
+    private userService: UserService,
+    ) { }
 
 
   Url = 'http://localhost:8080/api/v1/personas';
   Url2 = 'http://localhost:8080/api/v1/login';
-  Url3= 'http://localhost:8080/api//v1/psicologo';
-  Url4= 'http://localhost:8080/api//v1/admin';
+  Url3= 'http://localhost:8080/api/v1/psicologo';
+  Url4= 'http://localhost:8080/api/v1/admin';
   Url5= 'http://localhost:8080/api/v1/exportarPDF';
   Urltotalpaciente= 'http://localhost:8080/api/v1/contadortotalpaciente';
 
@@ -23,75 +27,212 @@ export class ServiceService {
 
   Urltotaladmin= 'http://localhost:8080/api/v1/contadortotaladmin';
 
+  Urlguardar = 'http://localhost:8080/api/v1/registerNewUser';
+  Urltest = 'http://localhost:8080/api/v3/tests';
 
 
-  getPDF():Observable<any>{
-    return this.http.get<Persona[]>(this.Url5);
-  }
-
-  gettotalpaciente():Observable<any>{
-    return this.http.get<Persona>(this.Urltotalpaciente);
-  }
-  gettotalpsicologo():Observable<any>{
-    return this.http.get<Persona>(this.Urltotalpsicologo);
-  }
-  gettotaladmin():Observable<any>{
-    return this.http.get<Persona>(this.Urltotaladmin);
-  }
-
+  requestHeader = new HttpHeaders(
+    {"No-Auth":"True"}
+  );
   loginUser(persona: Persona):Observable<object>{
     console.log(persona)
     return this.http.post(`${this.Url2}`,persona);
   }
+
+  createTest(persona:Persona):Observable<any>{
+    return this.http.post<Persona>(this.Urltest,persona
+      ,{headers: this.requestHeader}
+      );
+  }
+
+  loginUsuario(persona: Persona):Observable<object>{
+    console.log(persona)
+    return this.http.post(`${this.Url2}`,persona,{headers: this.requestHeader});
+  }
+
+
+  getPDF():Observable<any>{
+    return this.http.get<Persona[]>(this.Url5
+      
+      , {
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
+      
+      
+      );
+  }
+
+  gettotalpaciente() : Observable<any> {
+    
+    console.log(this.userService.sesion?.jwtToken
+      
+      , {
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
+      
+      
+      );
+
+    return this.http.get<Persona>(this.Urltotalpaciente, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    });
+  }
+  gettotalpsicologo():Observable<any>{
+    return this.http.get<Persona>(this.Urltotalpsicologo, {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    });
+  }
+  gettotaladmin():Observable<any>{
+    return this.http.get<Persona>(this.Urltotaladmin
+      , {
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
+      
+      
+      );
+  }
+
+ 
+
   getPersonas():Observable<any>{
-    return this.http.get<Persona[]>(this.Url);
+    return this.http.get<Persona[]>(this.Url
+      
+      , {
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
+      
+      
+      );
   }
   
   getPsicologo():Observable<any>{
-    return this.http.get<Persona[]>(this.Url3);
+    return this.http.get<Persona[]>(this.Url3
+      
+      , {
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
+      
+      );
   }
 
   getAdmin():Observable<any>{
-    return this.http.get<Persona[]>(this.Url4);
+    return this.http.get<Persona[]>(this.Url4
+      , {
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
+      );
   }
-
   createPersona(persona: Persona): Observable<any>{
-    return this.http.post<Persona>(this.Url, persona);
+    return this.http.post<Persona>(this.Urlguardar, persona);
   }
-  
-
   getPersonaId(id:number):Observable<any>{
-    return this.http.get<Persona>(this.Url+"/"+id);
+    return this.http.get<Persona>(this.Url+"/"+id
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    );
   }
 
 
 
   updatePersona(persona:Persona):Observable<any>{
-    return this.http.put<Persona>(this.Url+"/"+persona.id,persona);
+    return this.http.put<Persona>(this.Url+"/"+persona.id,persona
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    );
   }
 
   deletePersona(persona:Persona):Observable<any>{
-    return this.http.delete<Persona>(this.Url+"/"+persona.id);
+    return this.http.delete<Persona>(this.Url+"/"+persona.id
+    
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    );
   }
 
   //Metodos Nuevos para implementar las Opciones mejores
   elmininarPersona(id: number):Observable<object>{
-    return this.http.delete(`${this.Url}/${id}`)
+    return this.http.delete(`${this.Url}/${id}`
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    
+    )
   }
 
   obtenerPersonaPorId(id:number):Observable<Persona>{
-    return this.http.get<Persona>(`${this.Url}/${id}`);
+    return this.http.get<Persona>(`${this.Url}/${id}`
+    
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    );
   }
 
   actualizarPersona(id:number, persona: Persona) : Observable<object>{
-    return this.http.put(`${this.Url}/${id}` ,persona);
+    return this.http.put(`${this.Url}/${id}` ,persona
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    );
   }
 
   obtenerListaDePersona():Observable<Persona[]>{
-   return this.http.get<Persona[]>(`${this.Url}`);
+   return this.http.get<Persona[]>(`${this.Url}`
+   , {
+    headers: new HttpHeaders({
+      'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+    })
+  }
+   
+   
+   );
   }
 
   registrarPersona(persona:Persona):Observable<object>{
-    return this.http.post(`${this.Url}`,persona);
+    return this.http.post(`${this.Url}`,persona
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    
+    );
   }
 }

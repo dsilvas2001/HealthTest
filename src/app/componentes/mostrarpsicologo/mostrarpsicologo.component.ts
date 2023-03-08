@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { Persona } from 'src/app/Modelo/Persona';
 import { Usuario } from 'src/app/Modelo/Usuario';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
+import { HttpErrorResponse } from "@angular/common/http";
+
+import { UserService } from 'src/app/Services/user.service';
+
 import Swal from 'sweetalert2'
 
 
@@ -26,6 +30,7 @@ export class MostrarpsicologoComponent {
     private _CargarScripts: CargarScriptsService,
     public formulario: FormBuilder,
     private router: Router,
+    private userService: UserService,
     private service: ServiceService
   ) {
     _CargarScripts.Pagadmin(["scriptpagadmin"]);
@@ -52,7 +57,7 @@ listarpsicologo(){
 
 Editar(persona: Persona): void {
   localStorage.setItem("id", persona.id.toString());
-  this.router.navigate(["editarperfiles"]);
+  this.router.navigate(["/administrador/editarperfiles"]);
 }
 
 
@@ -206,4 +211,9 @@ scrippagprincipal() {
   node.charset = 'utf-8';
   document.getElementsByTagName('head')[0].appendChild(node);
 }
+cerrarSesion() {
+  this.userService.cerrarSesion();
+  this.router.navigate(['/login']);
+}
+
 }

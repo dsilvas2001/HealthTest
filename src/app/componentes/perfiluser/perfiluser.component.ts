@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 })
 export class PerfiluserComponent {
 
-  constructor(private _CargarScriptsuser: CargarScriptsService){
+  constructor(private _CargarScriptsuser: CargarScriptsService,private router: Router){
     _CargarScriptsuser.popuptest(["popup"]);
     _CargarScriptsuser.darkperfiluser(["darkperfiluser"]);
     _CargarScriptsuser.Webfont();

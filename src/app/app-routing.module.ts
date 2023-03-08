@@ -36,13 +36,68 @@ import { MostraradminComponent } from './componentes/mostraradmin/mostraradmin.c
 import { EditarperfilesComponent } from './componentes/editarperfiles/editarperfiles.component';
 import { EditarperfilpacienteComponent } from './componentes/editarperfilpaciente/editarperfilpaciente.component';
 import { EditarpacienteperfilComponent } from './componentes/editarpacienteperfil/editarpacienteperfil.component';
+import { AuthGuard } from './guard/auth.guard';
+import { PrincipalComponent } from './layout/principal/principal.component';
 
+import { PacienteGuard } from './guard/paciente.guard';
+import { EstresComponent } from './componentes/Tests/estres/estres.component';
+import { DepresionComponent } from './componentes/Tests/depresion/depresion.component';
+import { AnsiedadComponent } from './componentes/Tests/ansiedad/ansiedad.component';
+
+import { AdministradorGuard } from './guard/administrador.guard';
+import { PsicologoGuard } from './guard/psicologo.guard';
+import { ContactanospsicologoComponent } from './componentes/contactanospsicologo/contactanospsicologo.component';
+
+import { PerfilpsicologoComponent } from './componentes/perfilpsicologo/perfilpsicologo.component';
 
 const routes: Routes = [
-  {path: '', pathMatch:'full', redirectTo:'paginaprincipal'},
+  {path: '', pathMatch: 'full', redirectTo: 'paginaprincipal' },
   {path: 'paginaprincipal', component: PaginaprincipalComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'perfiluser', component: PerfiluserComponent},
+  
+  { 
+    path: "paciente", 
+    component: PrincipalComponent,
+    canActivate: [AuthGuard,PacienteGuard],
+    children: [
+      { path: 'perfiluser', component: PerfiluserComponent },
+      {path: 'paginapaciente', component: PaginapacienteComponent},
+      {path: 'reportetestpaciente', component: ReportetestpacienteComponent},
+      {path: 'contactanospaciente', component: ContactanospacienteComponent},
+    ],
+  },
+
+  { 
+    path: "psicologo", 
+    component: PrincipalComponent,
+    canActivate: [AuthGuard,PsicologoGuard],
+    children: [
+      {path: 'paginapsicologo', component: PaginapsicologoComponent},
+      {path: 'paginapsicologovisualizarpaciente', component: PaginapsicologovisualizarpacienteComponent},
+      {path: 'editarpacienteperfil', component: EditarpacienteperfilComponent},
+      {path: 'contactanospsicologo', component: ContactanospsicologoComponent},
+      {path: 'perfilpsicologo', component: PerfilpsicologoComponent},
+    ],
+  },
+
+  { 
+    path: "administrador", 
+    component: PrincipalComponent,
+    canActivate: [AuthGuard,AdministradorGuard],
+    children: [
+      {path: 'paginaadmin', component: PaginaadminComponent},
+      {path: 'mostrarpacientes', component: MostrarpacientesComponent},
+      {path: 'mostrarpsicologo', component: MostrarpsicologoComponent},
+      {path: 'mostraradmin', component: MostraradminComponent},
+      {path: 'editarperfilpaciente', component: EditarperfilpacienteComponent},
+      {path: 'editarperfiles', component: EditarperfilesComponent},
+      {path: 'estadisticasuser', component: EstadisticasuserComponent},
+      {path: 'estadisticatest', component: EstadisticatestComponent},
+      {path: 'contactanosadmin', component: ContactanosadminComponent},
+      {path: 'perfiladmin', component: PerfiladminComponent},
+    ],
+  },
+
   {path: 'testestresinfo', component: TestestresinfoComponent},
   {path: 'testansiedadinfo', component: TestansiedadinfoComponent},
   {path: 'testdepresioninfo', component: TestdepresioninfoComponent},
@@ -58,23 +113,13 @@ const routes: Routes = [
   {path: 'queesdepresion', component: QueesdepresionComponent},
   {path: 'sintomasdepresion', component: SintomasdepresionComponent},
   {path: 'blogsdepresion', component: BlogsdepresionComponent},
-  {path: 'paginaadmin', component: PaginaadminComponent},
-  {path: 'estadisticasuser', component: EstadisticasuserComponent},
-  {path: 'estadisticatest', component: EstadisticatestComponent},
-  {path: 'contactanosadmin', component: ContactanosadminComponent},
-  {path: 'perfiladmin', component: PerfiladminComponent},
-  {path: 'paginapaciente', component: PaginapacienteComponent},
-  {path: 'reportetestpaciente', component: ReportetestpacienteComponent},
-  {path: 'contactanospaciente', component: ContactanospacienteComponent},
+
+
   {path: 'loginregister', component: LoginregisterComponent},
-  {path: 'paginapsicologo', component: PaginapsicologoComponent},
-  {path: 'paginapsicologovisualizarpaciente', component: PaginapsicologovisualizarpacienteComponent},
-  {path: 'mostrarpacientes', component: MostrarpacientesComponent},
-  {path: 'mostrarpsicologo', component: MostrarpsicologoComponent},
-  {path: 'mostraradmin', component: MostraradminComponent},
-  {path: 'editarperfiles', component: EditarperfilesComponent},
-  {path: 'editarperfilpaciente', component: EditarperfilpacienteComponent},
-  {path: 'editarpacienteperfil', component: EditarpacienteperfilComponent},
+
+  {path: 'estres', component: EstresComponent},
+  {path: 'depresion', component: DepresionComponent},
+  {path: 'ansiedad', component: AnsiedadComponent},
 
 
 ];

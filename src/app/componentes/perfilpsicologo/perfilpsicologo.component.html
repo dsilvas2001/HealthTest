@@ -1,0 +1,167 @@
+<div class="sidebar">
+  <div class="logo-details" style="background: #fff">
+    <div class="logo-image">
+      <img
+        style="width: 6em"
+        src="../../../assets/img/logpestañapryect.png"
+        alt=""
+      />
+    </div>
+    <span class="logo_name" style="color: #000">HealthTest</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a href="/psicologo/paginapsicologo">
+        <i class="bx bx-grid-alt"></i>
+        <span class="links_name">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/psicologo/perfilpsicologo" class="active">
+        <i class="bx bx-user"></i>
+        <span class="links_name">Editar Perfil</span>
+      </a>
+    </li>
+    <li>
+      <a href="/psicologo/paginapsicologovisualizarpaciente">
+        <i class="bx bx-list-ul"></i>
+        <span class="links_name">Paciente</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-pie-chart-alt-2"></i>
+        <span class="links_name">Estadistica</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-coin-stack"></i>
+        <span class="links_name">Test de Estrés</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-coin-stack"></i>
+        <span class="links_name">Test de Ansiedad</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-coin-stack"></i>
+        <span class="links_name">Test de Depresión</span>
+      </a>
+    </li>
+    <li>
+      <a href="/psicologo/contactanospsicologo">
+        <i class="bx bx-message"></i>
+        <span class="links_name">Contactanos</span>
+      </a>
+    </li>
+    <br /><br /><br /><br /><br /><br />
+    <li>
+      <button class="cerrasesion" type="submit" (click)="cerrarSesion()">
+        <i class="uil uil-signout"></i>
+        <span class="link-name">Cerrar Sesión</span>
+      </button>
+    </li>
+  </ul>
+</div>
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class="bx bx-menu sidebarBtn"></i>
+      <span class="dashboard" style="color: blue">Perfil </span>
+      <span class="dashboard"> / HealthTest</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search..." />
+      <i class="bx bx-search"></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <span class="admin_name">{{ user.user.username }}</span>
+    </div>
+  </nav>
+  <div class="home-content">
+    <div class="overview-boxes">
+      <section class="book" id="book">
+        <h1 class="heading"><span>Perfil del </span>Psicólogo</h1>
+
+        <div class="row">
+          <div class="image">
+            <img
+              src="https://img.freepik.com/free-vector/competent-resume-writing-professional-cv-constructor-online-job-application-profile-creation-african-american-woman-filling-up-digital-form-concept-illustration_335657-2053.jpg?w=740&t=st=1676182309~exp=1676182909~hmac=6a4a685720619898b93dadd0c99e4dca6388ecae9c084af221de7426af7cb777"
+              alt=""
+            />
+          </div>
+
+          <form id="form">
+            <label style="font-size: 2em; position: relative; right: 7em"
+              >Nombre Completo</label
+            >
+            <input
+              type="text"
+              name="name"
+              [(ngModel)]="user.user.name"
+              placeholder="Nombre Completo"
+              class="box"
+              required
+            />
+            <label style="font-size: 2em; position: relative; right: 9.3em"
+              >Usuario</label
+            >
+            <input
+              type="text"
+              [(ngModel)]="user.user.username"
+              name="username"
+              placeholder="Usuario"
+              class="box"
+              required
+            />
+
+            <label style="font-size: 2em; position: relative; right: 7.5em"
+              >Tipo de Usuario</label
+            >
+            <input
+              type="text"
+              name="tipousuario"
+              [disabled]="true"
+              [(ngModel)]="user.user.tipousuario"
+              placeholder="Tipo de Usuario"
+              class="box"
+              required
+            />
+            <label style="font-size: 2em; position: relative; right: 7em"
+              >Correo Electrónico</label
+            >
+            <input
+              type="email"
+              [(ngModel)]="user.user.email"
+              name="email"
+              placeholder="Email"
+              class="box"
+              required
+            />
+
+            <button class="editarboton" (click)="ActualizarPersona(user.user)">
+              <svg
+                height="24"
+                width="24"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0 0h24v24H0z" fill="none"></path>
+                <path
+                  d="M5 13c0-5.088 2.903-9.436 7-11.182C16.097 3.564 19 7.912 19 13c0 .823-.076 1.626-.22 2.403l1.94 1.832a.5.5 0 0 1 .095.603l-2.495 4.575a.5.5 0 0 1-.793.114l-2.234-2.234a1 1 0 0 0-.707-.293H9.414a1 1 0 0 0-.707.293l-2.234 2.234a.5.5 0 0 1-.793-.114l-2.495-4.575a.5.5 0 0 1 .095-.603l1.94-1.832C5.077 14.626 5 13.823 5 13zm1.476 6.696l.817-.817A3 3 0 0 1 9.414 18h5.172a3 3 0 0 1 2.121.879l.817.817.982-1.8-1.1-1.04a2 2 0 0 1-.593-1.82c.124-.664.187-1.345.187-2.036 0-3.87-1.995-7.3-5-8.96C8.995 5.7 7 9.13 7 13c0 .691.063 1.372.187 2.037a2 2 0 0 1-.593 1.82l-1.1 1.039.982 1.8zM12 13a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"
+                  fill="currentColor"
+                ></path>
+              </svg>
+              <span>Editar Perfil</span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

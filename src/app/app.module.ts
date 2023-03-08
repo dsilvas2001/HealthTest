@@ -31,7 +31,7 @@ import { QueesdepresionComponent } from './componentes/queesdepresion/queesdepre
 import { BlogsdepresionComponent } from './componentes/blogsdepresion/blogsdepresion.component';
 import { SintomasdepresionComponent } from './componentes/sintomasdepresion/sintomasdepresion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http'
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from 'src/environments/environment';
@@ -58,6 +58,15 @@ import { PerfisueserComponent } from './componentes/perfisueser/perfisueser.comp
 import { EditarperfilesComponent } from './componentes/editarperfiles/editarperfiles.component';
 import { EditarperfilpacienteComponent } from './componentes/editarperfilpaciente/editarperfilpaciente.component';
 import { EditarpacienteperfilComponent } from './componentes/editarpacienteperfil/editarpacienteperfil.component';
+import { RouterModule } from '@angular/router';
+import { AuthGuard } from './Restriccion/auth.guard';
+import { UserService } from './Services/user.service';
+import { PrincipalComponent } from './layout/principal/principal.component';
+import { AnsiedadComponent } from './componentes/Tests/ansiedad/ansiedad.component';
+import { EstresComponent } from './componentes/Tests/estres/estres.component';
+import { DepresionComponent } from './componentes/Tests/depresion/depresion.component';
+import { ContactanospsicologoComponent } from './componentes/contactanospsicologo/contactanospsicologo.component';
+import { PerfilpsicologoComponent } from './componentes/perfilpsicologo/perfilpsicologo.component';
 
 
 
@@ -105,7 +114,13 @@ import { EditarpacienteperfilComponent } from './componentes/editarpacienteperfi
     PerfisueserComponent,
     EditarperfilesComponent,
     EditarperfilpacienteComponent,
-    EditarpacienteperfilComponent
+    EditarpacienteperfilComponent,
+    PrincipalComponent,
+    AnsiedadComponent,
+    EstresComponent,
+    DepresionComponent,
+    ContactanospsicologoComponent,
+    PerfilpsicologoComponent,
   ],
   imports: [
     BrowserModule,
@@ -113,8 +128,8 @@ import { EditarpacienteperfilComponent } from './componentes/editarpacienteperfi
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    RouterModule,
     SweetAlert2Module.forRoot()
-    
   ],
   providers: [
   ],

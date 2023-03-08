@@ -1,10 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { Persona } from 'src/app/Modelo/Persona';
 import { Usuario } from 'src/app/Modelo/Usuario';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
+import { HttpErrorResponse } from "@angular/common/http";
+
+import { UserService } from 'src/app/Services/user.service';
+
+import { UserauthservicesService } from 'src/app/Services/userauthservices.service';
+
 
 import Swal from 'sweetalert2'
 
@@ -21,20 +27,27 @@ export class LoginComponent implements OnInit {
   variableusuario: string = '';
   variableemail: string = '';
   variablecontrasena: string = '';
+  err: boolean = false;
+
 
   model: any = {};
   getData: boolean;
   persona: Persona = new Persona();
+  personaLogin: Persona = new Persona();
+  myForm: FormGroup;
 
   constructor(
     private _CargarScripts: CargarScriptsService,
     public formulario: FormBuilder,
     private router: Router,
+    private userService: UserService,
+    private userAuthService: UserauthservicesService,
     private service: ServiceService
   ) {
     _CargarScripts.carga(['scriplogin']);
     _CargarScripts.tipouser(['selectipouser']);
     this.tipoUsuario = '';
+    
   }
 
   ngOnInit() {
@@ -61,10 +74,10 @@ export class LoginComponent implements OnInit {
       this.espacioenblancoscontraseña();
       return;
     }
-    if (this.persona.tipousuario == 'Administrador') {
+    /*if (this.persona.tipousuario == 'Administrador') {
       this.successfullLogin();
       this.router.navigate(["/paginaadmin"]);
-    }
+    }*/
     if (this.persona.tipousuario == 'Psicologo') {
       this.successfullLogin();
       this.router.navigate(["/paginapsicologo"]);
@@ -123,7 +136,6 @@ export class LoginComponent implements OnInit {
         console.log('Error: ', error);
       },
     });
-
   }
   successfullLogin (){
     Swal.fire({
@@ -204,6 +216,84 @@ export class LoginComponent implements OnInit {
       confirmButtonText: 'Entendido!'
     })
   }
+
+  
+
+  loginutentication(){
+
+  /*  this.service.loginUsuario(this.persona).subscribe(
+      (response) => {
+        console.log('Objecto persona: ', response);
+
+      },
+      (error) => {
+        this.errorregister ();
+        console.log('Error: ', error);
+      },
+    );*/
+
+    this.service.loginUsuario(this.persona).subscribe({
+      next: (data) => {
+        this.confirmarregister ();
+        this.router.navigate(['login']);
+      },
+      error: (error) => {
+        this.errorregister ();
+        console.log('Error: ', error);
+      },
+    });
+  }
+
+  login() {
+    if (this.personaLogin.username == '') {
+      this.espacioenblancosusuario();
+      return;
+    }
+    if (this.personaLogin.password == '') {
+      this.espacioenblancoscontraseña();
+      return;
+    }
+    this.userService.login(this.personaLogin).subscribe({
+      next: (data) => {
+        console.log(data);
+        this.userService.guardarSesion(data);
+        if (data.user.tipousuario == "Administrador") {
+          this.router.navigate(['/administrador/paginaadmin']);
+        } else if (data.user.tipousuario == "Psicologo") { 
+          this.router.navigate(['/psicologo/paginapsicologo']);
+        } else if (data.user.tipousuario == "Paciente") {
+          this.router.navigate(['/paciente/paginapaciente']);
+        }
+      },
+      error: (error) => {
+        this.errorregister ();
+        console.log('Error: ', error);
+      },
+    });
+  }
+
+  cerrarSesion() {
+    this.userService.cerrarSesion();
+    this.router.navigate(['/login']);
+  }
+
+ 
+
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
   
 }
 

@@ -1,0 +1,152 @@
+<div class="sidebar">
+  <div class="logo-details" style="background: #fff">
+    <div class="logo-image">
+      <img
+        style="width: 6em"
+        src="../../../assets/img/logpestañapryect.png"
+        alt=""
+      />
+    </div>
+    <span class="logo_name" style="color: #000">HealthTest</span>
+  </div>
+  <ul class="nav-links">
+    <li>
+      <a href="/psicologo/paginapsicologo">
+        <i class="bx bx-grid-alt"></i>
+        <span class="links_name">Home</span>
+      </a>
+    </li>
+    <li>
+      <a href="/psicologo/perfilpsicologo">
+        <i class="bx bx-user"></i>
+        <span class="links_name">Editar Perfil</span>
+      </a>
+    </li>
+    <li>
+      <a href="/psicologo/paginapsicologovisualizarpaciente">
+        <i class="bx bx-list-ul"></i>
+        <span class="links_name">Paciente</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-pie-chart-alt-2"></i>
+        <span class="links_name">Estadistica</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-coin-stack"></i>
+        <span class="links_name">Test de Estrés</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-coin-stack"></i>
+        <span class="links_name">Test de Ansiedad</span>
+      </a>
+    </li>
+    <li>
+      <a href="#">
+        <i class="bx bx-coin-stack"></i>
+        <span class="links_name">Test de Depresión</span>
+      </a>
+    </li>
+    <li>
+      <a href="/psicologo/contactanospsicologo" class="active">
+        <i class="bx bx-message"></i>
+        <span class="links_name">Contactanos</span>
+      </a>
+    </li>
+    <br /><br /><br /><br /><br /><br />
+    <li>
+      <button class="cerrasesion" type="submit" (click)="cerrarSesion()">
+        <i class="uil uil-signout"></i>
+        <span class="link-name">Cerrar Sesión</span>
+      </button>
+    </li>
+  </ul>
+</div>
+<section class="home-section">
+  <nav>
+    <div class="sidebar-button">
+      <i class="bx bx-menu sidebarBtn"></i>
+      <span class="dashboard" style="color: blue">Contactanos </span>
+      <span class="dashboard"> / HealthTest</span>
+    </div>
+    <div class="search-box">
+      <input type="text" placeholder="Search..." />
+      <i class="bx bx-search"></i>
+    </div>
+    <div class="profile-details">
+      <!--<img src="images/profile.jpg" alt="">-->
+      <span class="admin_name">{{ user.user.username }}</span>
+    </div>
+  </nav>
+  <div class="home-content">
+    <div class="overview-boxes">
+      <section class="book" id="book">
+        <h1 class="heading"><span>Contacta Con</span> Nosotros</h1>
+
+        <div class="row">
+          <div class="image">
+            <img
+              src="https://img.freepik.com/free-vector/organic-flat-customer-support-illustration_23-2148899134.jpg?w=740&t=st=1676157503~exp=1676158103~hmac=29a5c3f74d321e89c3a4ff6daf1f3b29e90f7ca5d927b066e324df6094ebacf9"
+              alt=""
+            />
+          </div>
+
+          <form id="form">
+            <h3>Nos Encantan Las Conversaciones, Hablemos.</h3>
+            <input
+              type="text"
+              name="from_name"
+              id="from_name"
+              placeholder="Nombre Completo"
+              class="box"
+              required
+            />
+            <input
+              type="number"
+              name="phone"
+              id="phone"
+              placeholder="Numero de Telefono"
+              class="box"
+              required
+            />
+            <input
+              type="email"
+              name="email_id"
+              id="email_id"
+              placeholder="Email"
+              class="box"
+              required
+            />
+            <textarea
+              class="box"
+              name="message"
+              name="message"
+              id="message"
+              cols="30"
+              rows="5"
+              placeholder="Ingresa Tu Mensaje"
+            ></textarea>
+            <button>
+              <span class="shadow"></span>
+              <span class="edge"></span>
+              <span class="front text">
+                <input
+                  style="border-color: transparent; background: transparent"
+                  type="submit"
+                  class="front"
+                  id="button"
+                  value="Enviar" />
+                <i class="fa-solid fa-message"></i
+              ></span>
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>

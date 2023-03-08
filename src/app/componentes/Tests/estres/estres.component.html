@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Test de Estres</h1>
+    <form (submit)="GuardarTest()">
+      <fieldset id="pregunta1" class="radio">
+        <h2>1.- Me siento cansado/a*:</h2>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Nunca"
+        />
+        <label for="pregunta1_opcion1">Nunca</label>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="A veces"
+        />
+        <label for="pregunta1_opcion2">A veces</label>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Frecuentemente"
+        />
+        <label for="pregunta1_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Siempre"
+        />
+        <label for="pregunta1_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta2" class="radio">
+        <h2>2.- Me es difícil relajarme o sentirme tranquilo/a*:</h2>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Nunca"
+        />
+        <label for="pregunta2_opcion1">Nunca</label>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="A veces"
+        />
+        <label for="pregunta2_opcion2">A veces</label>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Frecuentemente"
+        />
+        <label for="pregunta2_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Siempre"
+        />
+        <label for="pregunta2_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta3" class="radio">
+        <h2>3.- Me es difícil tomar decisiones*:</h2>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Nunca"
+        />
+        <label for="pregunta3_opcion1">Nunca</label>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="A veces"
+        />
+        <label for="pregunta3_opcion2">A veces</label>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Frecuentemente"
+        />
+        <label for="pregunta3_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Siempre"
+        />
+        <label for="pregunta3_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta4" class="radio">
+        <h2>4.- Mi corazón se acelera y respiro rápidamente.*:</h2>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Nunca"
+        />
+        <label for="pregunta4_opcion1">Nunca</label>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="A veces"
+        />
+        <label for="pregunta4_opcion2">A veces</label>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Frecuentemente"
+        />
+        <label for="pregunta4_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Siempre"
+        />
+        <label for="pregunta4_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta5" class="radio">
+        <h2>5.- Tengo problemas para pensar con claridad.*:</h2>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Nunca"
+        />
+        <label for="pregunta5_opcion1">Nunca</label>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="A veces"
+        />
+        <label for="pregunta5_opcion2">A veces</label>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Frecuentemente"
+        />
+        <label for="pregunta5_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Siempre"
+        />
+        <label for="pregunta5_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta6" class="radio">
+        <h2>6.- Como demasiado o muy poco.*:</h2>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Nunca"
+        />
+        <label for="pregunta6_opcion1">Nunca</label>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="A veces"
+        />
+        <label for="pregunta6_opcion2">A veces</label>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Frecuentemente"
+        />
+        <label for="pregunta6_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Siempre"
+        />
+        <label for="pregunta6_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta7" class="radio">
+        <h2>7.- Me siento anestesiado emocionalmente.*:</h2>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Nunca"
+        />
+        <label for="pregunta7_opcion1">Nunca</label>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="A veces"
+        />
+        <label for="pregunta7_opcion2">A veces</label>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Frecuentemente"
+        />
+        <label for="pregunta7_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Siempre"
+        />
+        <label for="pregunta7_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta8" class="radio">
+        <h2>8.- Tengo problemas para dormir*:</h2>
+        <h2>
+          (por ejemplo: problemas para conciliar el sueño, me despierto en la
+          noche, me cuesta trabajo despertar, tengo pesadillas).
+        </h2>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Nunca"
+        />
+        <label for="pregunta8_opcion1">Nunca</label>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="A veces"
+        />
+        <label for="pregunta8_opcion2">A veces</label>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Frecuentemente"
+        />
+        <label for="pregunta8_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Siempre"
+        />
+        <label for="pregunta8_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta9" class="radio">
+        <h2>9.- Me es difícil sentirme esperanzado/a*:</h2>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Nunca"
+        />
+        <label for="pregunta9_opcion1">Nunca</label>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="A veces"
+        />
+        <label for="pregunta9_opcion2">A veces</label>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Frecuentemente"
+        />
+        <label for="pregunta9_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Siempre"
+        />
+        <label for="pregunta9_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta10" class="radio">
+        <h2>
+          10.- Corro riesgos innecesarios o participo en actividades que podrían
+          ser peligrosas para la salud y / o seguridad*:
+        </h2>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Nunca"
+        />
+        <label for="pregunta10_opcion1">Nunca</label>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="A veces"
+        />
+        <label for="pregunta10_opcion2">A veces</label>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Frecuentemente"
+        />
+        <label for="pregunta10_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Siempre"
+        />
+        <label for="pregunta10_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta11" class="radio">
+        <h2>
+          11.- Tengo dolor de espalda y cuello, u otro dolor crónico relacionado
+          con la tensión.*:
+        </h2>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Nunca"
+        />
+        <label for="pregunta11_opcion1">Nunca</label>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="A veces"
+        />
+        <label for="pregunta11_opcion2">A veces</label>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Frecuentemente"
+        />
+        <label for="pregunta11_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Siempre"
+        />
+        <label for="pregunta11_opcion4">Siempre</label>
+      </fieldset>
+      <fieldset id="pregunta12" class="radio">
+        <h2>12.- Uso más cafeína o nicotina de lo habitual.*:</h2>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Nunca"
+        />
+        <label for="pregunta12_opcion1">Nunca</label>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="A veces"
+        />
+        <label for="pregunta12_opcion2">A veces</label>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Frecuentemente"
+        />
+        <label for="pregunta12_opcion3">Frecuentemente</label>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Siempre"
+        />
+        <label for="pregunta12_opcion4">Siempre</label>
+      </fieldset>
+
+      <br /><br />
+      <button class="btn" type="submit">Enviar respuestas</button>
+    </form>
+  </body>
+</html>

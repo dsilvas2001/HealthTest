@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Test de Ansiedad</h1>
+    <form (submit)="GuardarTest()">
+      <fieldset id="pregunta1" class="radio">
+        <h2>1.- Entumecimiento u hormigueo*:</h2>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Para nada"
+        />
+        <label for="pregunta1_opcion1">Para nada</label>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta1_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta1_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta1"
+          id="pregunta1_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion1"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta1_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta2" class="radio">
+        <h2>2.- Sensación de calor*:</h2>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Para nada"
+        />
+        <label for="pregunta2_opcion1">Para nada</label>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta2_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta2_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta2"
+          id="pregunta2_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion2"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta2_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta3" class="radio">
+        <h2>3.- Debilidad en las piernas*:</h2>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Para nada"
+        />
+        <label for="pregunta3_opcion1">Para nada</label>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta3_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta3_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta3"
+          id="pregunta3_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion3"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta3_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta4" class="radio">
+        <h2>4.- Incapacidad para relajarte*:</h2>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Para nada"
+        />
+        <label for="pregunta4_opcion1">Para nada</label>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta4_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta4_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta4"
+          id="pregunta4_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion4"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta4_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta5" class="radio">
+        <h2>5.- Miedo a que ocurra lo peor*:</h2>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Para nada"
+        />
+        <label for="pregunta5_opcion1">Para nada</label>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta5_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta5_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta5"
+          id="pregunta5_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion5"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta5_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta6" class="radio">
+        <h2>6.- Mareo o aturdimiento*:</h2>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Para nada"
+        />
+        <label for="pregunta6_opcion1">Para nada</label>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta6_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta6_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta6"
+          id="pregunta6_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion6"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta6_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta7" class="radio">
+        <h2>7.- Palpitaciones o corazón latiendo con rapidez*:</h2>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Para nada"
+        />
+        <label for="pregunta7_opcion1">Para nada</label>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta7_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta7_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta7"
+          id="pregunta7_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion7"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta7_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta8" class="radio">
+        <h2>8.- Inestabilidad*:</h2>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Para nada"
+        />
+        <label for="pregunta8_opcion1">Para nada</label>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta8_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta8_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta8"
+          id="pregunta8_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion8"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta8_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta9" class="radio">
+        <h2>9.- Terror o miedo*:</h2>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Para nada"
+        />
+        <label for="pregunta9_opcion1">Para nada</label>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta9_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta9_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta9"
+          id="pregunta9_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion9"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta9_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta10" class="radio">
+        <h2>10.- Sentir nervios*:</h2>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Para nada"
+        />
+        <label for="pregunta10_opcion1">Para nada</label>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta10_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta10_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta10"
+          id="pregunta10_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion10"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta10_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta11" class="radio">
+        <h2>11.- Sentimiento de asfixia*:</h2>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Para nada"
+        />
+        <label for="pregunta11_opcion1">Para nada</label>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta11_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta11_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta11"
+          id="pregunta11_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion11"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta11_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+      <fieldset id="pregunta12" class="radio">
+        <h2>12.- Manos temblorosas*:</h2>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion1"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Para nada"
+        />
+        <label for="pregunta12_opcion1">Para nada</label>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion2"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Poco pero no me molestó mucho"
+        />
+        <label for="pregunta12_opcion2">Poco pero no me molestó mucho</label>
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion3"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Moderadamente – a veces no fue agradable"
+        />
+        <label for="pregunta12_opcion3"
+          >Moderadamente – a veces no fue agradable</label
+        >
+        <input
+          name="pregunta12"
+          id="pregunta12_opcion4"
+          type="radio"
+          [(ngModel)]="persona.opcion12"
+          value="Severo – me molestó mucho"
+        />
+        <label for="pregunta12_opcion4">Severo – me molestó mucho</label>
+      </fieldset>
+
+      <br /><br />
+      <button class="btn" type="submit">Enviar respuestas</button>
+    </form>
+  </body>
+</html>

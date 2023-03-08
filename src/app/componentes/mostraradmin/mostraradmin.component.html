@@ -34,11 +34,13 @@
             ><i class="bx bxs-user-circle icon"></i>Editar Perfil</a
           >
         </li>
+
         <li>
-          <a href="#"><i class="bx bxs-cog"></i> Settings</a>
-        </li>
-        <li>
-          <a href="#"><i class="bx bxs-log-out-circle"></i>Cerrar Sesión</a>
+          <br />
+          <button class="cerrasesion" type="submit" (click)="cerrarSesion()">
+            <i class="uil uil-signout"></i>
+            <span class="link-name">Cerrar Sesión</span>
+          </button>
         </li>
       </ul>
     </div>
@@ -59,7 +61,7 @@
       type="button"
       class="cargarbuttom"
       style="font-size: 2em"
-      href="/mostraradmin"
+      href="/administrador/mostraradmin"
     >
       <svg
         aria-hidden="true"
@@ -103,7 +105,7 @@
             <line y2="17" x2="8" y1="17" x1="16"></line>
             <polyline points="10 9 9 9 8 9"></polyline>
           </svg>
-          ReportePDF
+          Reporte Administrador
         </div>
         <div class="download">
           <svg

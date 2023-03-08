@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { Persona } from 'src/app/Modelo/Persona';
 import { Usuario } from 'src/app/Modelo/Usuario';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
+import { HttpErrorResponse } from "@angular/common/http";
+
+import { UserService } from 'src/app/Services/user.service';
+
+import { UserauthservicesService } from 'src/app/Services/userauthservices.service';
+
+
 import Swal from 'sweetalert2'
 
-import { HttpClient } from '@angular/common/http';
 
 
 
@@ -16,18 +22,19 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './paginapsicologovisualizarpaciente.component.html',
   styleUrls: ['./paginapsicologovisualizarpaciente.component.css']
 })
-export class PaginapsicologovisualizarpacienteComponent {
+export class PaginapsicologovisualizarpacienteComponent implements OnInit{
   model: any = {};
   getData: boolean;
   personas: Persona[] = [];
   persona: Persona = new Persona();
+  user: any;
 
 
   constructor(
     private _CargarScripts: CargarScriptsService,
     public formulario: FormBuilder,
     private router: Router,
-    private http: HttpClient,
+    private userService: UserService,
     private service: ServiceService
   ) {
     _CargarScripts.paginapsicologo(["menupsicologo"]);
@@ -47,6 +54,7 @@ export class PaginapsicologovisualizarpacienteComponent {
     this.listarpaciente();
 
     this.contador();
+    this.mostrardatos();
 
     /*this.service.gettotalpaciente().subscribe(data => {
       console.log('Objecto pacientes guardad: ', data);
@@ -69,35 +77,6 @@ contador()
     this.contadorusuario = data;
   });
 }
-prueba(){
-  const counterValueElement = document.getElementById('counter-value');
-
-fetch('http://localhost:8080/api/v1/contadortotalpaciente')
-  .then(response => response.json())
-  .then(data => {
-    if (counterValueElement !== null && counterValueElement !== undefined) {
-    counterValueElement.innerText = data;
-    }
-  })
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*contadorpacientes(persona: Persona): void {
   localStorage.setItem("contadorusuario", persona.contadorusuario.toString());
@@ -116,8 +95,10 @@ fetch('http://localhost:8080/api/v1/contadortotalpaciente')
 
 Editar(persona: Persona): void {
   localStorage.setItem("id", persona.id.toString());
-  this.router.navigate(["editarpacienteperfil"]);
+  this.router.navigate(["/psicologo/editarpacienteperfil"]);
 }
+
+
 
 
 Delete(persona: Persona) {
@@ -150,6 +131,8 @@ DeletePersona(persona:Persona) {
     }
   })
 }
+
+
 
 Guardar() {
   console.log('Objecto persona: ', this.persona);
@@ -251,5 +234,18 @@ errorregister (){
   showConfirmButton: false,
   timer: 1500
 })}
+
+
+mostrardatos(){
+  
+  this.user = this.userService.sesion;
+  console.log("mira",this.user.user.tipousuario);
+}
+cerrarSesion() {
+  this.userService.cerrarSesion();
+  this.router.navigate(['/login']);
+}
+
+
 
 }

@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { CargarScriptsService } from 'src/app/cargar-scripts.service';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators  } from '@angular/forms';
 import { Persona } from 'src/app/Modelo/Persona';
 import { Usuario } from 'src/app/Modelo/Usuario';
 import { Router } from '@angular/router';
 import { ServiceService } from 'src/app/Services/service.service';
+import { HttpErrorResponse } from "@angular/common/http";
+
+import { UserService } from 'src/app/Services/user.service';
+
 import Swal from 'sweetalert2'
 
 
@@ -26,6 +30,7 @@ export class MostrarpacientesComponent implements OnInit{
     private _CargarScripts: CargarScriptsService,
     public formulario: FormBuilder,
     private router: Router,
+    private userService: UserService,
     private service: ServiceService
   ) {
     _CargarScripts.Pagadmin(["scriptpagadmin"]);
@@ -58,7 +63,7 @@ ExportarPDF() {
 
 Editar(persona: Persona): void {
   localStorage.setItem("id", persona.id.toString());
-  this.router.navigate(["editarperfilpaciente"]);
+  this.router.navigate(["/administrador/editarperfilpaciente"]);
 }
 
 
@@ -124,6 +129,11 @@ Guardar() {
   });
 
 }
+
+linkpdfpaciente(){
+  return this.router.navigate(["http://localhost:8080/api/v1/exportarPDF"]);
+}
+
 setTipoUsuario(tipo: string) {
     
   this.persona.tipousuario = tipo;
@@ -211,7 +221,10 @@ scrippagprincipal() {
 }
 
 
-
+cerrarSesion() {
+  this.userService.cerrarSesion();
+  this.router.navigate(['/login']);
+}
 
 
 }

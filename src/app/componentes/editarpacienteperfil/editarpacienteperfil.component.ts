@@ -51,7 +51,6 @@ Editar(){
 
 
 
-
 ActualizarPersona(persona: Persona) {
   Swal.fire({
     title: '¿Estas seguro?',
