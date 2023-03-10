@@ -9,19 +9,21 @@ import { HttpErrorResponse } from "@angular/common/http";
 
 import { UserService } from 'src/app/Services/user.service';
 
+import Swal from 'sweetalert2'
 
 
 @Component({
-  selector: 'app-paginapaciente',
-  templateUrl: './paginapaciente.component.html',
-  styleUrls: ['./paginapaciente.component.css']
+  selector: 'app-perfilpaciente',
+  templateUrl: './perfilpaciente.component.html',
+  styleUrls: ['./perfilpaciente.component.css']
 })
-export class PaginapacienteComponent implements OnInit{
+export class PerfilpacienteComponent implements OnInit{
+
   user: any;
 
   constructor(private _CargarScriptsuser: CargarScriptsService, 
     private router: Router,
-    private userService: UserService,){
+    private userService: UserService,private service: ServiceService){
     _CargarScriptsuser.popuptest(["popup"]);
     _CargarScriptsuser.darkperfiluser(["darkperfiluser"]);
     _CargarScriptsuser.Webfont();
@@ -30,6 +32,31 @@ export class PaginapacienteComponent implements OnInit{
 
    
   }
+
+  ActualizarPersona(user: any) {
+    Swal.fire({
+      title: '¿Estas seguro?',
+      text: "Confirma si deseas Actualizar",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si , Actualizalo!'
+      
+    }).then((result) => {
+      if (result.isConfirmed) {
+          this.service.updatePersona(user).subscribe((dato) => {
+            Swal.fire(
+              'Usuario Actualizado!',
+              'El Usuario ha sido Actualizado con exito',
+              'success'
+            )
+          });
+      }
+    })
+  
+  }
+  
 
   ngOnInit(){
     this.mostrardatos();
@@ -52,5 +79,4 @@ export class PaginapacienteComponent implements OnInit{
     this.user = this.userService.sesion;
     console.log("mira",this.user.user.tipousuario);
   }
-
 }

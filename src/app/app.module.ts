@@ -67,6 +67,7 @@ import { EstresComponent } from './componentes/Tests/estres/estres.component';
 import { DepresionComponent } from './componentes/Tests/depresion/depresion.component';
 import { ContactanospsicologoComponent } from './componentes/contactanospsicologo/contactanospsicologo.component';
 import { PerfilpsicologoComponent } from './componentes/perfilpsicologo/perfilpsicologo.component';
+import { PerfilpacienteComponent } from './componentes/perfilpaciente/perfilpaciente.component';
 
 
 
@@ -121,6 +122,7 @@ import { PerfilpsicologoComponent } from './componentes/perfilpsicologo/perfilps
     DepresionComponent,
     ContactanospsicologoComponent,
     PerfilpsicologoComponent,
+    PerfilpacienteComponent,
   ],
   imports: [
     BrowserModule,

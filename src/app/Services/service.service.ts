@@ -41,9 +41,26 @@ export class ServiceService {
 
   createTest(persona:Persona):Observable<any>{
     return this.http.post<Persona>(this.Urltest,persona
-      ,{headers: this.requestHeader}
+      ,{
+        headers: new HttpHeaders({
+          'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+        })
+      }
       );
   }
+  
+  getPersonaId(id:number):Observable<any>{
+    return this.http.get<Persona>(this.Url+"/"+id
+    , {
+      headers: new HttpHeaders({
+        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
+      })
+    }
+    
+    );
+  }
+
+
 
   loginUsuario(persona: Persona):Observable<object>{
     console.log(persona)
@@ -141,16 +158,7 @@ export class ServiceService {
   createPersona(persona: Persona): Observable<any>{
     return this.http.post<Persona>(this.Urlguardar, persona);
   }
-  getPersonaId(id:number):Observable<any>{
-    return this.http.get<Persona>(this.Url+"/"+id
-    , {
-      headers: new HttpHeaders({
-        'Authorization': `Bearer ${this.userService.sesion?.jwtToken}`
-      })
-    }
-    
-    );
-  }
+ 
 
 
 

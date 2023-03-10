@@ -50,6 +50,10 @@ import { ContactanospsicologoComponent } from './componentes/contactanospsicolog
 
 import { PerfilpsicologoComponent } from './componentes/perfilpsicologo/perfilpsicologo.component';
 
+import { PerfilpacienteComponent } from './componentes/perfilpaciente/perfilpaciente.component';
+
+
+
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'paginaprincipal' },
   {path: 'paginaprincipal', component: PaginaprincipalComponent},
@@ -64,6 +68,7 @@ const routes: Routes = [
       {path: 'paginapaciente', component: PaginapacienteComponent},
       {path: 'reportetestpaciente', component: ReportetestpacienteComponent},
       {path: 'contactanospaciente', component: ContactanospacienteComponent},
+      {path: 'perfilpaciente', component: PerfilpacienteComponent},
     ],
   },
 
