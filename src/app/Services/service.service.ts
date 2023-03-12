@@ -16,7 +16,7 @@ export class ServiceService {
     ) { }
 
 
-  Url = 'http://localhost:8080/api/v1/personas';
+  /*Url = 'http://localhost:8080/api/v1/personas';
   Url2 = 'http://localhost:8080/api/v1/login';
   Url3= 'http://localhost:8080/api/v1/psicologo';
   Url4= 'http://localhost:8080/api/v1/admin';
@@ -28,8 +28,22 @@ export class ServiceService {
   Urltotaladmin= 'http://localhost:8080/api/v1/contadortotaladmin';
 
   Urlguardar = 'http://localhost:8080/api/v1/registerNewUser';
-  Urltest = 'http://localhost:8080/api/v3/tests';
+  Urltest = 'http://localhost:8080/api/v3/tests'; */
 
+
+  Url = 'https://backendhealthtest-production.up.railway.app/api/v1/personas';
+  Url2 = 'https://backendhealthtest-production.up.railway.app/api/v1/login';
+  Url3= 'https://backendhealthtest-production.up.railway.app/api/v1/psicologo';
+  Url4= 'https://backendhealthtest-production.up.railway.app/api/v1/admin';
+  Url5= 'https://backendhealthtest-production.up.railway.app/api/v1/exportarPDF';
+  Urltotalpaciente= 'https://backendhealthtest-production.up.railway.app/api/v1/contadortotalpaciente';
+
+  Urltotalpsicologo= 'https://backendhealthtest-production.up.railway.app/api/v1/contadortotalpsicolo';
+
+  Urltotaladmin= 'https://backendhealthtest-production.up.railway.app/api/v1/contadortotaladmin';
+
+  Urlguardar = 'https://backendhealthtest-production.up.railway.app/api/v1/registerNewUser';
+  Urltest = 'https://backendhealthtest-production.up.railway.app/api/v3/tests';
 
   requestHeader = new HttpHeaders(
     {"No-Auth":"True"}

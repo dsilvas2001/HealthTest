@@ -8,12 +8,15 @@ import { LoginResponse } from './login';
   providedIn: 'root',
 })
 export class UserService {
-  Url = 'http://localhost:8080/authenticate';
+ // Url = 'http://localhost:8080/authenticate';
+
+ Url = 'https://backendhealthtest-production.up.railway.app/authenticate';
 
   requestHeader = new HttpHeaders({ 'No-Auth': 'True' });
 
-  PATH_OF_API = 'http://localhost:8080';
+  /*PATH_OF_API = 'http://localhost:8080';*/
 
+  PATH_OF_API = 'https://backendhealthtest-production.up.railway.app';
   constructor(private http: HttpClient) {}
 
   loginUser(persona: Persona): Observable<object> {
